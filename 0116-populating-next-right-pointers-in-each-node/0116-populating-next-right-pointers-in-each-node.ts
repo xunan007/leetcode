@@ -26,14 +26,14 @@ function connect(root: _Node | null): _Node | null {
     return root;
 };
 
-function next(left: _Node, right: _Node) {
-    if (left === null) {
+function next(node1: _Node, node2: _Node) {
+    if (node1 === null) {
         return;
     }
 
-    left.next = right;
-    next(left.left, left.right);
-    next(right.left, right.right);
-    
-    next(left.right, right.left);
+    node1.next = node2;
+    next(node1.left, node1.right);
+    next(node2.left, node2.right);
+
+    next(node1.right, node2.left);
 }
