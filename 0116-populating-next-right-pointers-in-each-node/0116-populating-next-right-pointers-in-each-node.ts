@@ -15,14 +15,17 @@
  */
 
 function connect(root: _Node | null): _Node | null {
+    // 对根节点的判空
     if (root == null) {
         return null;
     }
 
+    // 这个是递归结束的位置
     if (root.left === null) {
         return root;
     }
-    
+
+    //  前序操作，根节点需要做两件事情
     root.left.next = root.right;
     root.right.next = root.next?.left;
     // 还是前序遍历的框架
