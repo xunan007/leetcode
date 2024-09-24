@@ -24,6 +24,7 @@ function diameterOfBinaryTree(root: TreeNode | null): number {
         }
         const left = maxDepth(root.left);
         const right = maxDepth(root.right);
+        // 这道题关键是转换成：当前节点的最大直径等于左右子树最大层数之和
         const diameter = left + right;
         maxDiameter = Math.max(diameter, maxDiameter);
         
