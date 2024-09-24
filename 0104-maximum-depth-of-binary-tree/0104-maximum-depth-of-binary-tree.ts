@@ -42,6 +42,6 @@ function maxDepth(root: TreeNode | null): number {
     const left = maxDepth(root.left);
     const right = maxDepth(root.right);
 
-    // 这里要明确为什么是在后序来处理
+    // 如果当前节点要做的事情需要通过左右⼦树的计算结果推导出来，就要⽤到后序遍历
     return Math.max(left, right) + 1;
 };
