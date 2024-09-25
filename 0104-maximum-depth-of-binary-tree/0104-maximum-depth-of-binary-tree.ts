@@ -35,13 +35,34 @@ function maxDepth(root: TreeNode | null): number {
     // return max;
 
     // 2. 分解问题
+    // if (root === null) {
+    //     return 0;
+    // }
+
+    // const left = maxDepth(root.left);
+    // const right = maxDepth(root.right);
+
+    // // 如果当前节点要做的事情需要通过左右⼦树的计算结果推导出来，就要⽤到后序遍历
+    // return Math.max(left, right) + 1;
+
+    // 3. 遍历还有一种解法，就是用层序遍历（最慢的解法）
     if (root === null) {
         return 0;
     }
-
-    const left = maxDepth(root.left);
-    const right = maxDepth(root.right);
-
-    // 如果当前节点要做的事情需要通过左右⼦树的计算结果推导出来，就要⽤到后序遍历
-    return Math.max(left, right) + 1;
+    const queue = [root];
+    let depth = 0;
+    while (queue.length > 0) {
+        let len = queue.length;
+        for (let i = 0; i < len; i++) {
+            const node = queue.shift();
+            if (node.left) {
+                queue.push(node.left);
+            }
+            if (node.right) {
+                queue.push(node.right);
+            }
+        }
+        depth++;
+    }
+    return depth;
 };
