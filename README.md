@@ -28,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 | [0764-n-ary-tree-level-order-traversal](https://github.com/xunan007/leetcode/tree/master/0764-n-ary-tree-level-order-traversal) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -44,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0543-diameter-of-binary-tree](https://github.com/xunan007/leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/xunan007/leetcode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -86,6 +88,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0145-binary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Array
 |  |
 | ------- |
