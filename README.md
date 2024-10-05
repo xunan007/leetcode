@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0572-subtree-of-another-tree](https://github.com/xunan007/leetcode/tree/master/0572-subtree-of-another-tree) |
 | [0617-merge-two-binary-trees](https://github.com/xunan007/leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/xunan007/leetcode/tree/master/0637-average-of-levels-in-binary-tree) |
+| [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 | [0764-n-ary-tree-level-order-traversal](https://github.com/xunan007/leetcode/tree/master/0764-n-ary-tree-level-order-traversal) |
 | [0774-maximum-depth-of-n-ary-tree](https://github.com/xunan007/leetcode/tree/master/0774-maximum-depth-of-n-ary-tree) |
@@ -64,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0572-subtree-of-another-tree](https://github.com/xunan007/leetcode/tree/master/0572-subtree-of-another-tree) |
 | [0617-merge-two-binary-trees](https://github.com/xunan007/leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/xunan007/leetcode/tree/master/0637-average-of-levels-in-binary-tree) |
+| [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
 | [0774-maximum-depth-of-n-ary-tree](https://github.com/xunan007/leetcode/tree/master/0774-maximum-depth-of-n-ary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
@@ -115,6 +117,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0572-subtree-of-another-tree](https://github.com/xunan007/leetcode/tree/master/0572-subtree-of-another-tree) |
 | [0617-merge-two-binary-trees](https://github.com/xunan007/leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/xunan007/leetcode/tree/master/0637-average-of-levels-in-binary-tree) |
+| [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 ## Stack
 |  |
@@ -147,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/xunan007/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
 ## String
 |  |
 | ------- |
