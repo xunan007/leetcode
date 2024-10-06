@@ -40,6 +40,7 @@ function isValidBST(root: TreeNode | null): boolean {
     if (root === null) {
         return true;
     }
+    // 这里参数改掉了，所以需要重新起一个 function
     return compare(root, -Infinity, Infinity);
 };
 
