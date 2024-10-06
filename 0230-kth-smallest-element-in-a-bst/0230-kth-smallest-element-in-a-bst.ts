@@ -17,18 +17,30 @@ function kthSmallest(root: TreeNode | null, k: number): number {
         return;
     }
     let index = 0;
-    let n = 0;
-    const walk = (root: TreeNode | null) => {
+    // 使用 return 优化一下性能
+    // 如果节点有 size，那么 topk 搜索就变成了 logN 的复杂度了
+    const walk = (root: TreeNode | null): number | boolean => {
         if (root === null) {
-            return;
+            return false;
         }
-        walk(root.left);
+
+        const val = walk(root.left);
+        if (val !== false) {
+            return val;
+        }
+
         index++;
         if (index === k) {
-            n = root.val;
+            return root.val;
         }
-        walk(root.right);
+
+        const val1 = walk(root.right);
+        if (val1 !== false) {
+            return val1;
+        }
+
+        return false;
     }
-    walk(root);
-    return n;
+
+    return <number>walk(root);
 };
