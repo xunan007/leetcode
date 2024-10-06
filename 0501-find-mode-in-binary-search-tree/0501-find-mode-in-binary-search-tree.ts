@@ -30,20 +30,24 @@ function findMode(root: TreeNode | null): number[] {
         walk(root.left);
         // 比较
         if (!p) {
+            // 第一个元素要放进去
             result.push(root.val);
         } else {
             if (p.val === root.val) {
                 count++;
                 if (count > maxCount) {
-                    // 注意这里大的时候，要把数组重置
+                    // 发现 count 溢出，要重置
                     result = [];
                     result.push(root.val);
                     maxCount = count;
                 } else if (count === maxCount) {
+                    // 如果 count 和最大一致，那么说明这个是新的
                     result.push(root.val);
                 }
             } else {
+                // 值不一样，重置次数
                 count = 1;
+                // 这种情况下可能是不重复升序数组
                 if (maxCount === 1) {
                     result.push(root.val);
                 }
