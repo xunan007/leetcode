@@ -14,25 +14,43 @@
 
 function isValidBST(root: TreeNode | null): boolean {
     // 1. 遍历 - 抓住中序遍历的有序性
+    // if (root === null) {
+    //     return true;
+    // }
+    // let queue = [];
+    // const walk = (root: TreeNode | null) => {
+    //     if (root === null) {
+    //         return;
+    //     }
+    //     walk(root.left);
+    //     queue.push(root.val);
+    //     walk(root.right);
+    // }
+    // walk(root);
+    // for (let i = 0; i < queue.length - 1; i++) {
+    //     const a = queue[i];
+    //     const b = queue[i + 1];
+    //     if (b - a <= 0) {
+    //         return false;
+    //     }
+    // }
+    // return true;
+
+    // 2. 分解
     if (root === null) {
+        return true;
+    }
+    return compare(root, -Infinity, Infinity);
+};
+
+function compare(root: TreeNode | null, min: number, max: number): boolean {
+    if (root === null) {
+        return true;
+    }
+    // 特别注意这里的区别，转换成了区间问题
+    if (root.val <= min || root.val >= max) {
         return false;
     }
-    let queue = [];
-    const walk = (root: TreeNode | null) => {
-        if (root === null) {
-            return;
-        }
-        walk(root.left);
-        queue.push(root.val);
-        walk(root.right);
-    }
-    walk(root);
-    for (let i = 0; i < queue.length - 1; i++) {
-        const a = queue[i];
-        const b = queue[i + 1];
-        if (b - a <= 0) {
-            return false;
-        }
-    }
-    return true;
-};
+    // 分解问题
+    return compare(root.left, min, root.val) && compare(root.right, root.val, max);
+}
