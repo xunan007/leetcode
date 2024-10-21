@@ -169,6 +169,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/xunan007/leetcode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
+| [0792-binary-search](https://github.com/xunan007/leetcode/tree/master/0792-binary-search) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -207,6 +208,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0222-count-complete-tree-nodes](https://github.com/xunan007/leetcode/tree/master/0222-count-complete-tree-nodes) |
+| [0792-binary-search](https://github.com/xunan007/leetcode/tree/master/0792-binary-search) |
 ## Bit Manipulation
 |  |
 | ------- |
