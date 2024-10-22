@@ -13,9 +13,6 @@ function mySqrt(x: number): number {
             r = mid - 1;
         }
     }
-    if (r <= x) {
-        return r;
-    } else {
-        return -1;
-    }
+    // 还是一样的，左大右小
+    return r;
 };
