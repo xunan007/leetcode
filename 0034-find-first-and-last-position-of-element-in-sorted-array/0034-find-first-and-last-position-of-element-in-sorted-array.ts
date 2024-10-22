@@ -13,7 +13,10 @@ function searchRange(nums: number[], target: number): number[] {
 
 };
 
+// 下面那些 if else 到底取左还是取右，列个简单的例子辅助解决就可以了
+
 // 找第一个比 target 小的
+// target 左边的最大，right要远离这个target
 function getLeftBorder(nums, target): number {
     let left = 0;
     let right = nums.length - 1;
@@ -24,7 +27,7 @@ function getLeftBorder(nums, target): number {
         let mid = Math.floor((left + right) / 2);
         // 这里的比较逻辑有难度
         if (target === nums[mid]) {
-            right = mid - 1;
+            right = mid - 1; // 关键代码
         }
         if (target < nums[mid]) {
             right = mid - 1;
@@ -37,6 +40,7 @@ function getLeftBorder(nums, target): number {
 }
 
 // 找第一个比target 大的
+// target 右边的最小，left 要远离这个target
 function getRightBorder(nums, target): number {
     let left = 0;
     let right = nums.length - 1;
@@ -47,7 +51,7 @@ function getRightBorder(nums, target): number {
         let mid = Math.floor((left + right) / 2);
         // 这里的比较逻辑有难度
         if (target === nums[mid]) {
-            left = mid + 1;
+            left = mid + 1; // 关键代码
         }
         if (target < nums[mid]) {
             right = mid - 1;
