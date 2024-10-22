@@ -211,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/xunan007/leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0035-search-insert-position](https://github.com/xunan007/leetcode/tree/master/0035-search-insert-position) |
+| [0069-sqrtx](https://github.com/xunan007/leetcode/tree/master/0069-sqrtx) |
 | [0222-count-complete-tree-nodes](https://github.com/xunan007/leetcode/tree/master/0222-count-complete-tree-nodes) |
 | [0792-binary-search](https://github.com/xunan007/leetcode/tree/master/0792-binary-search) |
 ## Bit Manipulation
@@ -236,4 +237,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0669-trim-a-binary-search-tree](https://github.com/xunan007/leetcode/tree/master/0669-trim-a-binary-search-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/xunan007/leetcode/tree/master/0783-search-in-a-binary-search-tree) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/xunan007/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
+## Math
+|  |
+| ------- |
+| [0069-sqrtx](https://github.com/xunan007/leetcode/tree/master/0069-sqrtx) |
 <!---LeetCode Topics End-->
