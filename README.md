@@ -176,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0283-move-zeroes](https://github.com/xunan007/leetcode/tree/master/0283-move-zeroes) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 | [0792-binary-search](https://github.com/xunan007/leetcode/tree/master/0792-binary-search) |
+| [1019-squares-of-a-sorted-array](https://github.com/xunan007/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -255,8 +256,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0027-remove-element](https://github.com/xunan007/leetcode/tree/master/0027-remove-element) |
 | [0283-move-zeroes](https://github.com/xunan007/leetcode/tree/master/0283-move-zeroes) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
+| [1019-squares-of-a-sorted-array](https://github.com/xunan007/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## Simulation
 |  |
 | ------- |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
+## Sorting
+|  |
+| ------- |
+| [1019-squares-of-a-sorted-array](https://github.com/xunan007/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 <!---LeetCode Topics End-->
