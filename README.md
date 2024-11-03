@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/xunan007/leetcode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/xunan007/leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
+| [0203-remove-linked-list-elements](https://github.com/xunan007/leetcode/tree/master/0203-remove-linked-list-elements) |
 ## Tree
 |  |
 | ------- |
@@ -290,4 +291,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0054-spiral-matrix](https://github.com/xunan007/leetcode/tree/master/0054-spiral-matrix) |
 | [0059-spiral-matrix-ii](https://github.com/xunan007/leetcode/tree/master/0059-spiral-matrix-ii) |
+## Recursion
+|  |
+| ------- |
+| [0203-remove-linked-list-elements](https://github.com/xunan007/leetcode/tree/master/0203-remove-linked-list-elements) |
 <!---LeetCode Topics End-->
