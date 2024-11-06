@@ -208,6 +208,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0142-linked-list-cycle-ii](https://github.com/xunan007/leetcode/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/xunan007/leetcode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0242-valid-anagram](https://github.com/xunan007/leetcode/tree/master/0242-valid-anagram) |
+| [0383-ransom-note](https://github.com/xunan007/leetcode/tree/master/0383-ransom-note) |
 | [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
 | [0940-fruit-into-baskets](https://github.com/xunan007/leetcode/tree/master/0940-fruit-into-baskets) |
 ## String
@@ -217,6 +218,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0242-valid-anagram](https://github.com/xunan007/leetcode/tree/master/0242-valid-anagram) |
 | [0257-binary-tree-paths](https://github.com/xunan007/leetcode/tree/master/0257-binary-tree-paths) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/xunan007/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0383-ransom-note](https://github.com/xunan007/leetcode/tree/master/0383-ransom-note) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
 ## Design
 |  |
@@ -312,4 +314,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0024-swap-nodes-in-pairs](https://github.com/xunan007/leetcode/tree/master/0024-swap-nodes-in-pairs) |
 | [0203-remove-linked-list-elements](https://github.com/xunan007/leetcode/tree/master/0203-remove-linked-list-elements) |
 | [0206-reverse-linked-list](https://github.com/xunan007/leetcode/tree/master/0206-reverse-linked-list) |
+## Counting
+|  |
+| ------- |
+| [0383-ransom-note](https://github.com/xunan007/leetcode/tree/master/0383-ransom-note) |
 <!---LeetCode Topics End-->
