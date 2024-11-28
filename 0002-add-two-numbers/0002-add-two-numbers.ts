@@ -40,6 +40,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
         }
     }
 
+    // 最后一位还要进位
     if (left === 1) {
         p.next = new ListNode(1);
     }
