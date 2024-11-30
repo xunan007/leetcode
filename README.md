@@ -193,6 +193,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/xunan007/leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0035-search-insert-position](https://github.com/xunan007/leetcode/tree/master/0035-search-insert-position) |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
+| [0048-rotate-image](https://github.com/xunan007/leetcode/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/xunan007/leetcode/tree/master/0049-group-anagrams) |
 | [0054-spiral-matrix](https://github.com/xunan007/leetcode/tree/master/0054-spiral-matrix) |
 | [0059-spiral-matrix-ii](https://github.com/xunan007/leetcode/tree/master/0059-spiral-matrix-ii) |
@@ -318,6 +319,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/xunan007/leetcode/tree/master/0002-add-two-numbers) |
+| [0048-rotate-image](https://github.com/xunan007/leetcode/tree/master/0048-rotate-image) |
 | [0069-sqrtx](https://github.com/xunan007/leetcode/tree/master/0069-sqrtx) |
 | [0202-happy-number](https://github.com/xunan007/leetcode/tree/master/0202-happy-number) |
 | [0367-valid-perfect-square](https://github.com/xunan007/leetcode/tree/master/0367-valid-perfect-square) |
@@ -377,6 +379,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/xunan007/leetcode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/xunan007/leetcode/tree/master/0054-spiral-matrix) |
 | [0059-spiral-matrix-ii](https://github.com/xunan007/leetcode/tree/master/0059-spiral-matrix-ii) |
 ## Recursion
