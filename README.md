@@ -184,6 +184,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
+| [1128-remove-all-adjacent-duplicates-in-string](https://github.com/xunan007/leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 ## Array
 |  |
 | ------- |
@@ -274,6 +275,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0459-repeated-substring-pattern](https://github.com/xunan007/leetcode/tree/master/0459-repeated-substring-pattern) |
 | [0541-reverse-string-ii](https://github.com/xunan007/leetcode/tree/master/0541-reverse-string-ii) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
+| [1128-remove-all-adjacent-duplicates-in-string](https://github.com/xunan007/leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 ## Design
 |  |
 | ------- |
