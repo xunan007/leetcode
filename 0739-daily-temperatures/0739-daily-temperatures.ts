@@ -1,30 +1,20 @@
 function dailyTemperatures(temperatures: number[]): number[] {
-    // let record: number[] = [];
-    // let result = [];
-    // for (let i = temperatures.length - 1; i >= 0; i--) {
-    //     while (record[record.length - 1] && temperatures[i] >= temperatures[record[record.length - 1]]) {
-    //         record.pop();
-    //     }
-    //     if (record[record.length - 1]) {
-    //         result.unshift(record[record.length - 1] - i);
-    //     } else {
-    //         result.unshift(0);
-    //     }
-    //     record.push(i);
-    // }
-    // return result;
     const len = temperatures.length;
-    const res: number[] = new Array(len).fill(0);
-    const stack: number[] = [];
+    let record: number[] = [];
+    let result = new Array(len).fill(0);
     for (let i = len - 1; i >= 0; i--) {
-        while(
-            stack.length && 
-            temperatures[i] >= temperatures[stack[stack.length - 1]]
-        ) {
-            stack.pop();
+        while (record[record.length - 1] && temperatures[i] >= temperatures[record[record.length - 1]]) {
+            record.pop();
         }
-        stack.length && (res[i] = stack[stack.length - 1] - i);
-        stack.push(i);
+        if (record[record.length - 1]) {
+            // 注意这里不要用 unshift，不然执行会超时
+            // 直接按位写就好了
+            result[i] = record[record.length - 1] - i
+        }
+        // 如果没有就是空的呗
+        
+        // 然后再把记录写进去
+        record.push(i);
     }
-    return res;
+    return result;
 };
