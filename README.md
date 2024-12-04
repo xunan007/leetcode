@@ -182,6 +182,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0225-implement-stack-using-queues](https://github.com/xunan007/leetcode/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/xunan007/leetcode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/xunan007/leetcode/tree/master/0234-palindrome-linked-list) |
+| [0394-decode-string](https://github.com/xunan007/leetcode/tree/master/0394-decode-string) |
 | [0654-maximum-binary-tree](https://github.com/xunan007/leetcode/tree/master/0654-maximum-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/xunan007/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
@@ -278,6 +279,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/xunan007/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0344-reverse-string](https://github.com/xunan007/leetcode/tree/master/0344-reverse-string) |
 | [0383-ransom-note](https://github.com/xunan007/leetcode/tree/master/0383-ransom-note) |
+| [0394-decode-string](https://github.com/xunan007/leetcode/tree/master/0394-decode-string) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/xunan007/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0459-repeated-substring-pattern](https://github.com/xunan007/leetcode/tree/master/0459-repeated-substring-pattern) |
 | [0541-reverse-string-ii](https://github.com/xunan007/leetcode/tree/master/0541-reverse-string-ii) |
@@ -421,6 +423,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0203-remove-linked-list-elements](https://github.com/xunan007/leetcode/tree/master/0203-remove-linked-list-elements) |
 | [0206-reverse-linked-list](https://github.com/xunan007/leetcode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/xunan007/leetcode/tree/master/0234-palindrome-linked-list) |
+| [0394-decode-string](https://github.com/xunan007/leetcode/tree/master/0394-decode-string) |
 ## Counting
 |  |
 | ------- |
