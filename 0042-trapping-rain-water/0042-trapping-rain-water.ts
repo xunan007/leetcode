@@ -20,9 +20,11 @@ function trap(height: number[]): number {
     // }
     // return result;
 
-    // 这道题也可以用单调栈来做，横着计算
+    // 这道题也可以用单调栈来做，横着计算，算到的时候相当于把那一层的空缺给填了，往后就是按层去填充
     // 1. 高度入栈，这是个单调递增的栈，直到遇见一个比栈顶大的高度
-    // 2. 开始计算面积，事实上就是找到当前这个元素与
+    // 2. 开始计算面积，先取出栈顶元素，这个元素是当前地基的层高；此时的栈顶元素，和当前遍历到的元素，共同构成一个坑
+    // 3. 继续计算，如果此时的栈顶元素比当前遍历的元素大，说明地基高了，填不了，重复1的动作
+    // 4. 反之，再取出栈顶元素，这个栈顶元素是新的地基的层高（前面的可以认为已经填平了）；如果此时还有栈顶元素说明又构成一个新的坑，如果此时栈顶元素没有了，说明构成不了坑了，当前元素入栈后重复1的过程
 
     const len = height.length;
     let result = 0;
@@ -31,8 +33,8 @@ function trap(height: number[]): number {
         while (stack.length > 0 && height[i] >= height[stack[stack.length - 1]]) {
             // 把平台的高度找出来
             let pH = height[stack.pop()];
+            // 算面积，宽是左右的差，高是左右柱子最小的那个减去本身平台的高度
             if (stack[stack.length - 1] !== undefined) {
-
                 let h = Math.min(height[i], height[stack[stack.length - 1]]) - pH;
                 result += h * (i - stack[stack.length - 1] - 1);
             }
