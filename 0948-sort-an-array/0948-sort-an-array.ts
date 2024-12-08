@@ -1,5 +1,5 @@
 // 参考：https://juejin.cn/post/6844903444365443080
-// 计数排序、桶排序、基数排序本质都是桶排序，只是对桶的划分不太一样，这里知道概念即可，本质上还是分治法
+// 桶排序（计数、基数、桶排序看另一道题：https://leetcode.com/problems/kth-largest-element-in-an-array/description/?envType=study-plan-v2&envId=top-100-liked）
 function sortArray(nums: number[]): number[] {
     // return bubbleSort(nums);
     // return selectSort(nums);
