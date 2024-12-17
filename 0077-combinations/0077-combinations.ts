@@ -9,7 +9,8 @@ function combine(n: number, k: number): number[][] {
             return;
         }
         // 这里的 startIdx 是有讲究的
-        for (let i = startIdx; i <= n; i++) {
+        // 剪枝优化加一个判断条件
+        for (let i = startIdx; i <= n && n - i + 1 >= k; i++) {
             startIdx++;
             path.push(i);
             backTracking(startIdx, n, k - 1);
