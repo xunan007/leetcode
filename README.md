@@ -215,6 +215,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0059-spiral-matrix-ii](https://github.com/xunan007/leetcode/tree/master/0059-spiral-matrix-ii) |
 | [0073-set-matrix-zeroes](https://github.com/xunan007/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/xunan007/leetcode/tree/master/0074-search-a-2d-matrix) |
+| [0078-subsets](https://github.com/xunan007/leetcode/tree/master/0078-subsets) |
 | [0084-largest-rectangle-in-histogram](https://github.com/xunan007/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/xunan007/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
@@ -350,6 +351,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/xunan007/leetcode/tree/master/0078-subsets) |
 | [0222-count-complete-tree-nodes](https://github.com/xunan007/leetcode/tree/master/0222-count-complete-tree-nodes) |
 ## Backtracking
 |  |
@@ -358,6 +360,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/xunan007/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
 | [0077-combinations](https://github.com/xunan007/leetcode/tree/master/0077-combinations) |
+| [0078-subsets](https://github.com/xunan007/leetcode/tree/master/0078-subsets) |
 | [0093-restore-ip-addresses](https://github.com/xunan007/leetcode/tree/master/0093-restore-ip-addresses) |
 | [0113-path-sum-ii](https://github.com/xunan007/leetcode/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
