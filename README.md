@@ -296,6 +296,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/xunan007/leetcode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/xunan007/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/xunan007/leetcode/tree/master/0076-minimum-window-substring) |
+| [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0151-reverse-words-in-a-string](https://github.com/xunan007/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0242-valid-anagram](https://github.com/xunan007/leetcode/tree/master/0242-valid-anagram) |
 | [0257-binary-tree-paths](https://github.com/xunan007/leetcode/tree/master/0257-binary-tree-paths) |
@@ -357,6 +358,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
 | [0077-combinations](https://github.com/xunan007/leetcode/tree/master/0077-combinations) |
 | [0113-path-sum-ii](https://github.com/xunan007/leetcode/tree/master/0113-path-sum-ii) |
+| [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0216-combination-sum-iii](https://github.com/xunan007/leetcode/tree/master/0216-combination-sum-iii) |
 | [0257-binary-tree-paths](https://github.com/xunan007/leetcode/tree/master/0257-binary-tree-paths) |
 ## Binary Search Tree
@@ -480,6 +482,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
