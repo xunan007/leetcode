@@ -5,6 +5,7 @@ function subsetsWithDup(nums: number[]): number[][] {
     const backtracking = (startIdx: number) => {
         result.push(path.slice());
         for (let i = startIdx; i < nums.length; i++) {
+            // 去重逻辑
             if (i !== startIdx && nums[i] === nums[i - 1]) {
                 continue;
             }
