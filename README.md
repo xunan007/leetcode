@@ -209,6 +209,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/xunan007/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
+| [0046-permutations](https://github.com/xunan007/leetcode/tree/master/0046-permutations) |
 | [0048-rotate-image](https://github.com/xunan007/leetcode/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/xunan007/leetcode/tree/master/0049-group-anagrams) |
 | [0054-spiral-matrix](https://github.com/xunan007/leetcode/tree/master/0054-spiral-matrix) |
@@ -364,6 +365,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0017-letter-combinations-of-a-phone-number](https://github.com/xunan007/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0039-combination-sum](https://github.com/xunan007/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
+| [0046-permutations](https://github.com/xunan007/leetcode/tree/master/0046-permutations) |
 | [0077-combinations](https://github.com/xunan007/leetcode/tree/master/0077-combinations) |
 | [0078-subsets](https://github.com/xunan007/leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/xunan007/leetcode/tree/master/0090-subsets-ii) |
