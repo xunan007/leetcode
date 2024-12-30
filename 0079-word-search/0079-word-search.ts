@@ -5,6 +5,39 @@ function exist(board: string[][], word: string): boolean {
     for (let i = 0; i < maxY; i++) {
         used.push(new Array(maxX).fill(0));
     }
+    // 两个优化
+    // 1. 如果 word 当中字母出现的次数比 board 要多，那么直接返回 false
+    const cnt = {};
+    for (let i = 0; i < maxY; i++) {
+        for (let j = 0; j < maxX; j++) {
+            if (cnt[board[i][j]]) {
+                cnt[board[i][j]]++;
+            } else {
+                cnt[board[i][j]] = 1;
+            }
+        }
+    }
+
+    const wordCnt = {};
+    for (let i = 0; i < word.length; i++) {
+        if (wordCnt[word[i]]) {
+            wordCnt[word[i]]++;
+        } else {
+            wordCnt[word[i]] = 1;
+        }
+        let boardCnt = cnt[word[i]] ?? 0;
+        if (wordCnt[word[i]] > boardCnt) {
+            return false;
+        }
+    }
+
+    // 2. 减少递归的次数
+    // 如果word第一个字母在board中出现的次数比最后一个字母在board中出现的次数多，那么反过来查询，可以减少进入递归的次数
+    if (cnt[word[0]] > cnt[word[word.length - 1]]) {
+        word = word.split('').reverse().join('');
+    }
+
+
     const canFind = (startX: number, startY: number, word: string): boolean => {
         used[startY][startX] = 1;
         // 没有需要找的字符了，说明结束了
