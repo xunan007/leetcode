@@ -5,6 +5,7 @@ function canJump(nums: number[]): boolean {
     let maxCover = nums.length;
     for (let i = 0; i < nums.length && i < cover; i++) {
         cover = Math.max(i + 1 + nums[i], cover);
+        // 注意这里是大于等于而不只是等于
         if (cover >= maxCover) {
             return true;
         }
