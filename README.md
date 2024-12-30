@@ -303,6 +303,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0003-longest-substring-without-repeating-characters](https://github.com/xunan007/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/xunan007/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/xunan007/leetcode/tree/master/0020-valid-parentheses) |
+| [0022-generate-parentheses](https://github.com/xunan007/leetcode/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/xunan007/leetcode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/xunan007/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/xunan007/leetcode/tree/master/0076-minimum-window-substring) |
@@ -368,6 +369,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/xunan007/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0022-generate-parentheses](https://github.com/xunan007/leetcode/tree/master/0022-generate-parentheses) |
 | [0037-sudoku-solver](https://github.com/xunan007/leetcode/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/xunan007/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
@@ -503,6 +505,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/xunan007/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
