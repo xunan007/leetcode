@@ -303,6 +303,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0491-non-decreasing-subsequences](https://github.com/xunan007/leetcode/tree/master/0491-non-decreasing-subsequences) |
 | [0560-subarray-sum-equals-k](https://github.com/xunan007/leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0652-find-duplicate-subtrees](https://github.com/xunan007/leetcode/tree/master/0652-find-duplicate-subtrees) |
+| [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
 | [0940-fruit-into-baskets](https://github.com/xunan007/leetcode/tree/master/0940-fruit-into-baskets) |
 ## String
 |  |
@@ -327,6 +328,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0438-find-all-anagrams-in-a-string](https://github.com/xunan007/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0459-repeated-substring-pattern](https://github.com/xunan007/leetcode/tree/master/0459-repeated-substring-pattern) |
 | [0541-reverse-string-ii](https://github.com/xunan007/leetcode/tree/master/0541-reverse-string-ii) |
+| [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/xunan007/leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 ## Design
@@ -441,6 +443,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0349-intersection-of-two-arrays](https://github.com/xunan007/leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0455-assign-cookies](https://github.com/xunan007/leetcode/tree/master/0455-assign-cookies) |
 | [0541-reverse-string-ii](https://github.com/xunan007/leetcode/tree/master/0541-reverse-string-ii) |
+| [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
 | [1019-squares-of-a-sorted-array](https://github.com/xunan007/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## Simulation
@@ -519,6 +522,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0055-jump-game](https://github.com/xunan007/leetcode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/xunan007/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0455-assign-cookies](https://github.com/xunan007/leetcode/tree/master/0455-assign-cookies) |
+| [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
 ## Dynamic Programming
 |  |
 | ------- |
