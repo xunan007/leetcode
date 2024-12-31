@@ -219,6 +219,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/xunan007/leetcode/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/xunan007/leetcode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/xunan007/leetcode/tree/master/0055-jump-game) |
+| [0056-merge-intervals](https://github.com/xunan007/leetcode/tree/master/0056-merge-intervals) |
 | [0059-spiral-matrix-ii](https://github.com/xunan007/leetcode/tree/master/0059-spiral-matrix-ii) |
 | [0073-set-matrix-zeroes](https://github.com/xunan007/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/xunan007/leetcode/tree/master/0074-search-a-2d-matrix) |
@@ -454,6 +455,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/xunan007/leetcode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/xunan007/leetcode/tree/master/0018-4sum) |
 | [0049-group-anagrams](https://github.com/xunan007/leetcode/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/xunan007/leetcode/tree/master/0056-merge-intervals) |
 | [0148-sort-list](https://github.com/xunan007/leetcode/tree/master/0148-sort-list) |
 | [0215-kth-largest-element-in-an-array](https://github.com/xunan007/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0242-valid-anagram](https://github.com/xunan007/leetcode/tree/master/0242-valid-anagram) |
