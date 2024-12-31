@@ -419,6 +419,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0150-evaluate-reverse-polish-notation](https://github.com/xunan007/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0202-happy-number](https://github.com/xunan007/leetcode/tree/master/0202-happy-number) |
 | [0367-valid-perfect-square](https://github.com/xunan007/leetcode/tree/master/0367-valid-perfect-square) |
+| [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Two Pointers
 |  |
 | ------- |
@@ -505,6 +506,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0206-reverse-linked-list](https://github.com/xunan007/leetcode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/xunan007/leetcode/tree/master/0234-palindrome-linked-list) |
 | [0394-decode-string](https://github.com/xunan007/leetcode/tree/master/0394-decode-string) |
+| [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Counting
 |  |
 | ------- |
@@ -534,6 +536,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/xunan007/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
+| [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -593,4 +596,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0332-reconstruct-itinerary](https://github.com/xunan007/leetcode/tree/master/0332-reconstruct-itinerary) |
+## Memoization
+|  |
+| ------- |
+| [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 <!---LeetCode Topics End-->
