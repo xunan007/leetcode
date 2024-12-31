@@ -211,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/xunan007/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/xunan007/leetcode/tree/master/0040-combination-sum-ii) |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
+| [0045-jump-game-ii](https://github.com/xunan007/leetcode/tree/master/0045-jump-game-ii) |
 | [0046-permutations](https://github.com/xunan007/leetcode/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/xunan007/leetcode/tree/master/0047-permutations-ii) |
 | [0048-rotate-image](https://github.com/xunan007/leetcode/tree/master/0048-rotate-image) |
@@ -510,6 +511,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/xunan007/leetcode/tree/master/0011-container-with-most-water) |
+| [0045-jump-game-ii](https://github.com/xunan007/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/xunan007/leetcode/tree/master/0055-jump-game) |
 | [0455-assign-cookies](https://github.com/xunan007/leetcode/tree/master/0455-assign-cookies) |
 ## Dynamic Programming
@@ -517,6 +519,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0022-generate-parentheses](https://github.com/xunan007/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/xunan007/leetcode/tree/master/0042-trapping-rain-water) |
+| [0045-jump-game-ii](https://github.com/xunan007/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/xunan007/leetcode/tree/master/0055-jump-game) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
