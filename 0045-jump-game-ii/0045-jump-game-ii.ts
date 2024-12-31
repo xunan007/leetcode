@@ -21,9 +21,3 @@ function jump(nums: number[]): number {
     }
     return path.length;
 };
-
-// [7,0,9,6,9,6,1,7,9,0,1,2,9,0,3]
-//  1             .
-//      1                 .
-//          1                 .
-//                1.            .
