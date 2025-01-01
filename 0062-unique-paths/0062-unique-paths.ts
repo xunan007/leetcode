@@ -6,22 +6,17 @@ function uniquePaths(m: number, n: number): number {
         dp.push(new Array(x).fill(0));
     }
     dp[0][0] = 1;
-    for (let i = 0; i < y; i++) {
-        for (let j = 0; j < x; j++) {
-            // 遍历的起始顺序要跳过0,0
-            if (i === 0 && j === 0) {
-                continue;
-            }
+    // 可以有个优化，直接把第一行和第一列全部填充
+    for (let i = 0; i < n; i++) {
+        dp[0][i] = 1;
+    }
+    for (let i = 0; i < m; i++) {
+        dp[i][0] = 1;
+    }
+    for (let i = 1; i < y; i++) {
+        for (let j = 1; j < x; j++) {
             // 状态转移方程
-            let a = 0;
-            if (j - 1 >= 0) {
-                a = dp[i][j - 1];
-            }
-            let b = 0;
-            if (i - 1 >= 0) {
-                b = dp[i - 1][j];
-            }
-            dp[i][j] = a + b;
+            dp[i][j] = dp[i][j - 1] + dp[i - 1][j];
         }
     }
     return dp[y - 1][x - 1];
