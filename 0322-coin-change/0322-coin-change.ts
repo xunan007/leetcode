@@ -5,6 +5,7 @@ function coinChange(coins: number[], amount: number): number {
         let min = Infinity;
         for (let j = 0; j < coins.length; j++) {
             let coin = coins[j];
+            // 状态转移，注意有前提条件
             if (i - coin >= 0 && dp[i - coin] !== -1) {
                 min = Math.min(min, dp[i - coin] + 1);
             }
