@@ -424,6 +424,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0070-climbing-stairs](https://github.com/xunan007/leetcode/tree/master/0070-climbing-stairs) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/xunan007/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0202-happy-number](https://github.com/xunan007/leetcode/tree/master/0202-happy-number) |
+| [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
 | [0367-valid-perfect-square](https://github.com/xunan007/leetcode/tree/master/0367-valid-perfect-square) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Two Pointers
@@ -547,6 +548,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0322-coin-change](https://github.com/xunan007/leetcode/tree/master/0322-coin-change) |
+| [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
 | [0747-min-cost-climbing-stairs](https://github.com/xunan007/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Heap (Priority Queue)
