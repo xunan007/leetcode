@@ -261,6 +261,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0940-fruit-into-baskets](https://github.com/xunan007/leetcode/tree/master/0940-fruit-into-baskets) |
 | [0948-sort-an-array](https://github.com/xunan007/leetcode/tree/master/0948-sort-an-array) |
 | [1019-squares-of-a-sorted-array](https://github.com/xunan007/leetcode/tree/master/1019-squares-of-a-sorted-array) |
+| [1130-last-stone-weight-ii](https://github.com/xunan007/leetcode/tree/master/1130-last-stone-weight-ii) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -558,6 +559,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0416-partition-equal-subset-sum](https://github.com/xunan007/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0747-min-cost-climbing-stairs](https://github.com/xunan007/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
+| [1130-last-stone-weight-ii](https://github.com/xunan007/leetcode/tree/master/1130-last-stone-weight-ii) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
