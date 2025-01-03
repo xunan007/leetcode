@@ -249,6 +249,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/xunan007/leetcode/tree/master/0322-coin-change) |
 | [0347-top-k-frequent-elements](https://github.com/xunan007/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/xunan007/leetcode/tree/master/0349-intersection-of-two-arrays) |
+| [0416-partition-equal-subset-sum](https://github.com/xunan007/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0454-4sum-ii](https://github.com/xunan007/leetcode/tree/master/0454-4sum-ii) |
 | [0455-assign-cookies](https://github.com/xunan007/leetcode/tree/master/0455-assign-cookies) |
 | [0491-non-decreasing-subsequences](https://github.com/xunan007/leetcode/tree/master/0491-non-decreasing-subsequences) |
@@ -554,6 +555,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0322-coin-change](https://github.com/xunan007/leetcode/tree/master/0322-coin-change) |
 | [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
+| [0416-partition-equal-subset-sum](https://github.com/xunan007/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0747-min-cost-climbing-stairs](https://github.com/xunan007/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 ## Heap (Priority Queue)
