@@ -4,6 +4,8 @@ function findTargetSumWays(nums: number[], target: number): number {
     for (let i = 0; i < nums.length; i++) {
         sum += nums[i];
     }
+    // 如果除2除不尽，那么没有结果
+    // sum分解成left+right，两者想减绝对值最大不会超过sum
     if ((sum + target) % 2 !== 0 || Math.abs(target) > sum) {
         return 0;
     }
