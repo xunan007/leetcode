@@ -120,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0112-path-sum](https://github.com/xunan007/leetcode/tree/master/0112-path-sum) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/xunan007/leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0199-binary-tree-right-side-view](https://github.com/xunan007/leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0279-perfect-squares](https://github.com/xunan007/leetcode/tree/master/0279-perfect-squares) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/xunan007/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0322-coin-change](https://github.com/xunan007/leetcode/tree/master/0322-coin-change) |
 | [0404-sum-of-left-leaves](https://github.com/xunan007/leetcode/tree/master/0404-sum-of-left-leaves) |
@@ -434,6 +435,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0096-unique-binary-search-trees](https://github.com/xunan007/leetcode/tree/master/0096-unique-binary-search-trees) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/xunan007/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0202-happy-number](https://github.com/xunan007/leetcode/tree/master/0202-happy-number) |
+| [0279-perfect-squares](https://github.com/xunan007/leetcode/tree/master/0279-perfect-squares) |
 | [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
 | [0367-valid-perfect-square](https://github.com/xunan007/leetcode/tree/master/0367-valid-perfect-square) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
@@ -558,6 +560,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/xunan007/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/xunan007/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/xunan007/leetcode/tree/master/0131-palindrome-partitioning) |
+| [0279-perfect-squares](https://github.com/xunan007/leetcode/tree/master/0279-perfect-squares) |
 | [0322-coin-change](https://github.com/xunan007/leetcode/tree/master/0322-coin-change) |
 | [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
 | [0377-combination-sum-iv](https://github.com/xunan007/leetcode/tree/master/0377-combination-sum-iv) |
