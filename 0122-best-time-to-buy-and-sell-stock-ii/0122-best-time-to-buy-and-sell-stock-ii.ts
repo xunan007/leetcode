@@ -1,10 +1,9 @@
 function maxProfit(prices: number[]): number {
-    let sum = 0;
-    for (let i = 1; i < prices.length; i++) {
-        let val = prices[i] - prices[i-1];
-        if (val > 0) {
-            sum += val;
-        }
+    let noHold = 0;
+    let hold = -Infinity;
+    for (let i = 1; i <= prices.length; i++) {
+        noHold = Math.max(noHold, hold + prices[i - 1]);
+        hold = Math.max(hold, noHold - prices[i - 1]);
     }
-    return sum;
+    return noHold;
 };
