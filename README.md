@@ -354,6 +354,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
 | [0874-backspace-string-compare](https://github.com/xunan007/leetcode/tree/master/0874-backspace-string-compare) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/xunan007/leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
+| [1250-longest-common-subsequence](https://github.com/xunan007/leetcode/tree/master/1250-longest-common-subsequence) |
 ## Design
 |  |
 | ------- |
@@ -594,6 +595,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0747-min-cost-climbing-stairs](https://github.com/xunan007/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/xunan007/leetcode/tree/master/1013-fibonacci-number) |
 | [1130-last-stone-weight-ii](https://github.com/xunan007/leetcode/tree/master/1130-last-stone-weight-ii) |
+| [1250-longest-common-subsequence](https://github.com/xunan007/leetcode/tree/master/1250-longest-common-subsequence) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
