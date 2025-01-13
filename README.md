@@ -350,6 +350,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/xunan007/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0344-reverse-string](https://github.com/xunan007/leetcode/tree/master/0344-reverse-string) |
 | [0383-ransom-note](https://github.com/xunan007/leetcode/tree/master/0383-ransom-note) |
+| [0392-is-subsequence](https://github.com/xunan007/leetcode/tree/master/0392-is-subsequence) |
 | [0394-decode-string](https://github.com/xunan007/leetcode/tree/master/0394-decode-string) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/xunan007/leetcode/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0459-repeated-substring-pattern](https://github.com/xunan007/leetcode/tree/master/0459-repeated-substring-pattern) |
@@ -479,6 +480,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0295-find-median-from-data-stream](https://github.com/xunan007/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0344-reverse-string](https://github.com/xunan007/leetcode/tree/master/0344-reverse-string) |
 | [0349-intersection-of-two-arrays](https://github.com/xunan007/leetcode/tree/master/0349-intersection-of-two-arrays) |
+| [0392-is-subsequence](https://github.com/xunan007/leetcode/tree/master/0392-is-subsequence) |
 | [0455-assign-cookies](https://github.com/xunan007/leetcode/tree/master/0455-assign-cookies) |
 | [0541-reverse-string-ii](https://github.com/xunan007/leetcode/tree/master/0541-reverse-string-ii) |
 | [0768-partition-labels](https://github.com/xunan007/leetcode/tree/master/0768-partition-labels) |
@@ -591,6 +593,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0337-house-robber-iii](https://github.com/xunan007/leetcode/tree/master/0337-house-robber-iii) |
 | [0343-integer-break](https://github.com/xunan007/leetcode/tree/master/0343-integer-break) |
 | [0377-combination-sum-iv](https://github.com/xunan007/leetcode/tree/master/0377-combination-sum-iv) |
+| [0392-is-subsequence](https://github.com/xunan007/leetcode/tree/master/0392-is-subsequence) |
 | [0416-partition-equal-subset-sum](https://github.com/xunan007/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0494-target-sum](https://github.com/xunan007/leetcode/tree/master/0494-target-sum) |
 | [0518-coin-change-ii](https://github.com/xunan007/leetcode/tree/master/0518-coin-change-ii) |
