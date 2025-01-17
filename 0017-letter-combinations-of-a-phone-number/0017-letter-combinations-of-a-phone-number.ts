@@ -2,7 +2,7 @@ function letterCombinations(digits: string): string[] {
     if (digits === '') {
         return [];
     }
-    
+
     let n2c: string[] = [
         "",
         "",
@@ -20,20 +20,20 @@ function letterCombinations(digits: string): string[] {
     let result: string[] = [];
     let path: string[] = [];
 
-    const backtracking = (depth: number, startIdx: number) => {
-        if (depth === len) {
+    // 从答案的角度来思考
+    const dfs = (i: number) => {
+        if (i === len) {
             result.push(path.join(''));
             return;
         }
-        let str = n2c[Number(digitsArr[startIdx])];
-        for (let i = 0; i < str.length; i++) {
-            path.push(str[i]);
-            backtracking(depth + 1, startIdx + 1);
+        let index = Number(digitsArr[i]);
+        for (let j = 0; j < n2c[index].length; j++) {
+            path.push(n2c[index][j]);
+            dfs(i + 1);
             path.pop();
         }
-    };
-
-    backtracking(0, 0);
+    }
+    dfs(0);
     return result;
 
 };
