@@ -1,19 +1,28 @@
 function subsetsWithDup(nums: number[]): number[][] {
     let result: number[][] = [];
     let path: number[] = [];
+    // 先排序，方便去重
     nums.sort((a, b) => a - b);
-    const backtracking = (startIdx: number) => {
-        result.push(path.slice());
-        for (let i = startIdx; i < nums.length; i++) {
-            // 去重逻辑
-            if (i !== startIdx && nums[i] === nums[i - 1]) {
-                continue;
-            }
-            path.push(nums[i]);
-            backtracking(i + 1);
-            path.pop();
+    // INPUT角度
+    const dfs = (i: number) => {
+        if (i === nums.length) {
+            result.push(path.slice());
+            return;
         }
+        // 不选
+        let j = i+1;
+        // 去重逻辑
+        while(nums[j] === nums[i]) {
+            j++;
+        }
+        dfs(j);
+        // 选
+        path.push(nums[i]);
+        dfs(i+1);
+        path.pop();
     }
-    backtracking(0);
+    // ANSWER角度
+    
+    dfs(0);
     return result;
 };
