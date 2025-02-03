@@ -1,44 +1,42 @@
 function restoreIpAddresses(s: string): string[] {
-    // 还是切割问题
-    // 多了一步条件的判断
-    const isLegal = (s: string): boolean => {
-        if (s[0] === '0' && s.length > 1) {
+    let result: string[] = [];
+    let path: string[] = [];
+    const isLegal = (str: string): boolean => {
+        if (str === '0') {
+            return true;
+        }
+        if (str[0] === '0') {
             return false;
         }
-        if (Number(s) > 255) {
+        if (Number(str) > 255) {
             return false;
         }
         return true;
     }
-    let path: string[] = [];
-    let result: string[] = [];
-    const backtracking = (startIdx: number) => {
-        if (path.length === 4) {
-            result.push(path.join('.'));
-            return;
-        }
-        for (let i = startIdx; i < s.length; i++) {
-            if (path.length !== 3) {
-                let str = s.slice(startIdx, i + 1);
-                if (!isLegal(str)) {
-                    return;
-                }
-                path.push(str);
-                backtracking(i + 1);
-                path.pop();
-            } else {
-                let str = s.slice(startIdx);
-                if (!isLegal(str)) {
-                    return;
-                }
-                path.push(str);
-                backtracking(i + 1);
-                path.pop();
+    const dfs = (i: number): void => {
+        // 最后一个位置特殊
+        if (path.length === 3) {
+            let sec = s.slice(i);
+            // 溢出
+            if (!isLegal(sec)) {
                 return;
             }
+            // 满足条件要求就进入
+            path.push(sec);
+            result.push(path.join('.'));
+            path.pop()
+            return;
         }
-    }
-
-    backtracking(0);
+        for (let j = i; j < s.length && s.length - j >= 4 - path.length; j++) {
+            let sec = s.slice(i, j + 1);
+            if (!isLegal(sec)) {
+                continue;
+            }
+            path.push(sec);
+            dfs(j + 1);
+            path.pop();
+        }
+    };
+    dfs(0);
     return result;
 };
