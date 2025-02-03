@@ -3,20 +3,19 @@ function combine(n: number, k: number): number[][] {
     // 抽象成一个多叉树
     let result: number[][] = [];
     let path: number[] = [];
-    const backTracking = (startIdx: number, n: number, k: number) => {
-        if (k === 0) {
+    const dfs = (i: number): void => {
+        // 剪枝1
+        if (path.length === k) {
             result.push(path.slice());
             return;
         }
-        // 这里的 startIdx 是有讲究的
-        // 剪枝优化加一个判断条件
-        for (let i = startIdx; i <= n && n - i + 1 >= k; i++) {
-            startIdx++;
-            path.push(i);
-            backTracking(startIdx, n, k - 1);
+        // 剪枝2
+        for (let j = i; j <= n && n - j + 1 >= k - path.length; j++) {
+            path.push(j);
+            dfs(j + 1);
             path.pop();
         }
-    }
-    backTracking(1, n, k);
+    };
+    dfs(1);
     return result;
 };
