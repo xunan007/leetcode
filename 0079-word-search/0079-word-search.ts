@@ -1,83 +1,75 @@
 function exist(board: string[][], word: string): boolean {
     let maxY = board.length;
     let maxX = board[0].length;
-    let used: number[][] = [];
+    let used: boolean[][] = [];
     for (let i = 0; i < maxY; i++) {
-        used.push(new Array(maxX).fill(0));
+        let arr = new Array(maxX).fill(false);
+        used.push(arr);
     }
-    // 两个优化
-    // 1. 如果 word 当中字母出现的次数比 board 要多，那么直接返回 false
-    const cnt = {};
+
+    if (word.length > maxY * maxX) {
+        return false;
+    }
+    // 找一下哪个字母出现的次数多
+    let sCnt = 0;
+    let sArr: number[][] = [];
+    let eCnt = 0;
+    let eArr: number[][] = [];
     for (let i = 0; i < maxY; i++) {
         for (let j = 0; j < maxX; j++) {
-            if (cnt[board[i][j]]) {
-                cnt[board[i][j]]++;
-            } else {
-                cnt[board[i][j]] = 1;
+            if (board[i][j] === word[0]) {
+                sCnt++;
+                sArr.push([i, j]);
+            }
+            if (board[i][j] === word[word.length - 1]) {
+                eCnt++;
+                eArr.push([i, j]);
             }
         }
     }
 
-    const wordCnt = {};
-    for (let i = 0; i < word.length; i++) {
-        if (wordCnt[word[i]]) {
-            wordCnt[word[i]]++;
-        } else {
-            wordCnt[word[i]] = 1;
-        }
-        let boardCnt = cnt[word[i]] ?? 0;
-        if (wordCnt[word[i]] > boardCnt) {
-            return false;
-        }
+    // 只要有一个没出现，那这个board就构成不了
+    if (sCnt === 0 || eCnt === 0) {
+        return false;
     }
-
-    // 2. 减少递归的次数
-    // 如果word第一个字母在board中出现的次数比最后一个字母在board中出现的次数多，那么反过来查询，可以减少进入递归的次数
-    if (cnt[word[0]] > cnt[word[word.length - 1]]) {
+    if (sCnt > eCnt) {
+        sArr = eArr;
         word = word.split('').reverse().join('');
     }
 
-
-    const canFind = (startX: number, startY: number, word: string): boolean => {
-        used[startY][startX] = 1;
-        // 没有需要找的字符了，说明结束了
-        if (word.length === 0) {
-            return true;
+    let i = 1;
+    let result = false;
+    const dfs = (y: number, x: number) => {
+        if (i === word.length) {
+            result = true;
+            return;
         }
-        const find: number[][] = [
-            [startX, startY - 1],
-            [startX, startY + 1],
-            [startX - 1, startY],
-            [startX + 1, startY],
-        ].filter((item) => {
-            // 去掉不合法的，要符合没有被用过且不要溢出
-            const x = item[0];
-            const y = item[1];
-            return x >= 0 && x < maxX && y >= 0 && y < maxY && used[y][x] === 0;
+        let finds = [[y - 1, x], [y + 1, x], [y, x - 1], [y, x + 1]];
+        finds = finds.filter(([y, x]) => {
+            return y >= 0 && y < maxY && x >= 0 && x < maxX && !used[y][x];
         });
-        // 没有可用的位置了，找失败了
-        if (find.length === 0) {
-            used[startY][startX] = 0;
-            return false;
-        }
-        for (let i = 0; i < find.length; i++) {
-            const [x, y] = find[i];
-            if (board[y][x] === word[0] && canFind(x, y, word.slice(1))) {
-                return true;
+        for (let j = 0; j < finds.length; j++) {
+            let [y, x] = finds[j];
+            if (board[y][x] === word[i]) {
+                i++;
+                used[y][x] = true;
+                dfs(y, x);
+                i--;
+                used[y][x] = false;
             }
         }
-        used[startY][startX] = 0;
-        return false;
+    }
 
-    };
-
-    for (let i = 0; i < maxX; i++) {
-        for (let j = 0; j < maxY; j++) {
-            if (board[j][i] === word[0] && canFind(i, j, word.slice(1))) {
-                return true;
-            }
+    for (let i = 0; i < sArr.length; i++) {
+        let [y, x] = sArr[i];
+        used[y][x] = true;
+        dfs(y, x);
+        used[y][x] = false;
+        if (result) {
+            return true;
         }
     }
 
     return false;
+
 };
