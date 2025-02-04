@@ -1,29 +1,30 @@
 function combinationSum2(candidates: number[], target: number): number[][] {
-    candidates.sort((a, b) => a - b);
     let result: number[][] = [];
     let path: number[] = [];
-    let sum = 0;
-    const backtracking = (startIdx: number) => {
-        if (sum >= target) {
-            if (sum === target) {
-                result.push(path.slice());
-            }
+    let sum: number = 0;
+
+    candidates.sort((a, b) => a - b);
+
+    const dfs = (i: number): void => {
+        if (sum > target) {
             return;
         }
-        for (let i = startIdx; i < candidates.length; i++) {
-            if (i !== startIdx && candidates[i] === candidates[i - 1]) {
+        if (sum === target) {
+            result.push(path.slice());
+            return;
+        }
+        for (let j = i; j < candidates.length; j++) {
+            if (j !== i && candidates[j] === candidates[j - 1]) {
                 continue;
             }
-            if (sum + candidates[i] > target) {
-                return;
-            }
-            sum += candidates[i];
-            path.push(candidates[i]);
-            backtracking(i + 1);
-            sum -= candidates[i];
+            path.push(candidates[j]);
+            sum += candidates[j];
+            dfs(j + 1);
             path.pop();
+            sum -= candidates[j];
         }
     }
-    backtracking(0);
+
+    dfs(0);
     return result;
 };
