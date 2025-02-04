@@ -3,7 +3,7 @@ function findItinerary(tickets: string[][]): string[] {
     let path: string[] = [];
     // 先构建需要使用的数据结构
     let record: Map<string, string[]> = new Map();
-    let isVisited: Map<string, number> = new Map();
+    let canVisitCnt: Map<string, number> = new Map();
     tickets.forEach((item) => {
         let [from, to] = item;
         if (!record.has(from)) {
@@ -11,11 +11,11 @@ function findItinerary(tickets: string[][]): string[] {
         } else {
             record.get(from).push(to);
         }
-        let count = isVisited.get(from + to) || 0;
+        let count = canVisitCnt.get(from + to) || 0;
         if (count === 0) {
-            isVisited.set(from + to, 1);
+            canVisitCnt.set(from + to, 1);
         } else {
-            isVisited.set(from + to, count + 1);
+            canVisitCnt.set(from + to, count + 1);
         }
     });
     // 对到达机场进行排序
@@ -33,14 +33,14 @@ function findItinerary(tickets: string[][]): string[] {
         }
         let to = record.get(from) || [];
         for (let i = 0; i < to.length; i++) {
-            // 这里是要防止死循环（一个支上走过的路要排除），以及防止to项都是一样的无效遍历（81用例）
-            if (isVisited.get(from + to[i]) === 0 || to[i] === to[i - 1]) {
+            // 这里是要防止死循环（一个支上走过的路要排除），还有防止to项都是一样的无效遍历（81用例）
+            if (canVisitCnt.get(from + to[i]) === 0 || to[i] === to[i - 1]) {
                 continue;
             }
             path.push(to[i]);
-            isVisited.set(from + to[i], isVisited.get(from + to[i]) - 1);
+            canVisitCnt.set(from + to[i], canVisitCnt.get(from + to[i]) - 1);
             backtracking(to[i]);
-            isVisited.set(from + to[i], isVisited.get(from + to[i]) + 1);
+            canVisitCnt.set(from + to[i], canVisitCnt.get(from + to[i]) + 1);
             path.pop();
         }
     };
