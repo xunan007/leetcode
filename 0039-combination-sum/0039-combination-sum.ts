@@ -1,30 +1,29 @@
 function combinationSum(candidates: number[], target: number): number[][] {
-    // 这道题特殊的点在于怎么取既不遗漏又不重复
     let result: number[][] = [];
     let path: number[] = [];
     let sum = 0;
+    // 先排序，好判断sum
     candidates.sort((a, b) => a - b);
-    const backtracking = (startIdx: number) => {
-        if (sum >= target) {
-            if (sum === target) {
-                // 注意这里要浅复制
-                result.push(path.slice());
-            }
+
+    const dfs = (i: number): void => {
+        if (sum > target) {
             return;
         }
-        // 注意这里是怎么控制数组的
-        for (let i = startIdx, j = 0; i < candidates.length; i++, j++) {
-            // 注意这里的剪枝优化
-            if (sum + candidates[i] > target) {
-                return;
-            }
-            sum += candidates[i];
-            path.push(candidates[i]);
-            backtracking(startIdx + j);
-            sum -= candidates[i];
+        if (sum === target) {
+            result.push(path.slice());
+            return;
+        }
+        for (let j = i; j < candidates.length; j++) {
+            path.push(candidates[j]);
+            sum += candidates[j];
+            
+            dfs(j);
+
             path.pop();
+            sum -= candidates[j];
         }
     }
-    backtracking(0);
+
+    dfs(0);
     return result;
 };
