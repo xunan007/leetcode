@@ -2,20 +2,26 @@ function permute(nums: number[]): number[][] {
     let result: number[][] = [];
     let path: number[] = [];
     const len = nums.length;
-    const dfs = (nums: number[]) => {
+    const onPath: boolean[] = new Array(len).fill(false);
+
+    const dfs = () => {
         if (path.length === len) {
             result.push(path.slice());
             return;
         }
         for (let i = 0; i < nums.length; i++) {
+            if (onPath[i]) {
+                continue;
+            }
+            
             path.push(nums[i]);
-            const copyNums = nums.slice();
-            copyNums.splice(i, 1);
-            dfs(copyNums);
+            onPath[i] = true;
+            dfs();
             path.pop();
+            onPath[i] = false;
         }
     }
 
-    dfs(nums);
+    dfs();
     return result;
 };
