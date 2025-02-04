@@ -1,23 +1,29 @@
 function permuteUnique(nums: number[]): number[][] {
     let result: number[][] = [];
     let path: number[] = [];
+    const len = nums.length;
     nums.sort((a, b) => a - b);
-    const backtracking = (list) => {
-        if (path.length === nums.length) {
+
+    const dfs = (nums: number[]): void => {
+        if (path.length === len) {
             result.push(path.slice());
             return;
         }
-        for (let i = 0; i < list.length; i++) {
-            if (list[i] === list[i-1]) {
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] === nums[i-1]) {
                 continue;
             }
-            path.push(list[i]);
-            let newList = list.slice();
-            newList.splice(i, 1);
-            backtracking(newList);
+            
+            path.push(nums[i]);
+
+            let copyNums = nums.slice();
+            copyNums.splice(i, 1);
+            dfs(copyNums);
+
             path.pop();
         }
     }
-    backtracking(nums);
+
+    dfs(nums);
     return result;
 };
