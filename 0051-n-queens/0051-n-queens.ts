@@ -1,38 +1,52 @@
 function solveNQueens(n: number): string[][] {
     let result: string[][] = [];
     let path: number[] = [];
-    const backtracking = (y: number) => {
-        if (y === n) {
-            let r: string[] = [];
-            path.forEach((item) => {
+    let onPath: boolean[] = new Array(false);
+    const isValid = (i: number): boolean => {
+        // 第一行肯定是返回 true
+        if (path.length === 0) {
+            return true;
+        }
+        // 第二行开始要考虑对角线
+        let l = i - 1;
+        let r = i + 1;
+        for (let j = path.length - 1; j >= 0; j--) {
+            if (path[j] === l || path[j] === r) {
+                return false;
+            }
+            l--;
+            r++;
+        }
+        return true;
+    }
+    const dfs = (): void => {
+        if (path.length === n) {
+            let _result: string[] = [];
+            for (let i = 0; i < path.length; i++) {
                 let arr: string[] = new Array(n).fill('.');
-                arr[item] = 'Q';
-                r.push(arr.join(''));
-            });
-            result.push(r);
+                arr[path[i]] = 'Q';
+                _result.push(arr.join(''));
+            }
+            result.push(_result);
             return;
         }
         for (let i = 0; i < n; i++) {
-            // 检查以下前面的是否有同个x，45度和135度是否有元素
-            let pass = true;
-            for (let j = y - 1, l = i - 1, r = i + 1; j >= 0; j--, l--, r++) {
-                if (path[j] === i) {
-                    pass = false;
-                    break;
-                }
-                if (path[j] === l || path[j] === r) {
-                    pass = false;
-                    break
-                }
-            }
-            if (!pass) {
+            if (onPath[i]) {
                 continue;
             }
+            if (!isValid(i)) {
+                continue;
+            }
+            onPath[i] = true;
             path.push(i);
-            backtracking(y + 1);
+
+            dfs();
+
+            onPath[i] = false;
             path.pop();
         }
-    }
-    backtracking(0);
+    };
+
+    dfs();
     return result;
 };
