@@ -23,6 +23,7 @@ function numIslands(grid: string[][]): number {
         dfs(y, x + 1);
     };
     let result = 0;
+    // 外层套了一层遍历，因为起点可以有多个，这里要结合题目的意思来
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
             if (grid[i][j] === '1' && !isVisited[i][j]) {
