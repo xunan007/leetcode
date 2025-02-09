@@ -117,6 +117,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0776-n-ary-tree-postorder-traversal](https://github.com/xunan007/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0801-is-graph-bipartite](https://github.com/xunan007/leetcode/tree/master/0801-is-graph-bipartite) |
 | [0813-all-paths-from-source-to-target](https://github.com/xunan007/leetcode/tree/master/0813-all-paths-from-source-to-target) |
+| [0922-possible-bipartition](https://github.com/xunan007/leetcode/tree/master/0922-possible-bipartition) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -144,6 +145,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0774-maximum-depth-of-n-ary-tree](https://github.com/xunan007/leetcode/tree/master/0774-maximum-depth-of-n-ary-tree) |
 | [0801-is-graph-bipartite](https://github.com/xunan007/leetcode/tree/master/0801-is-graph-bipartite) |
 | [0813-all-paths-from-source-to-target](https://github.com/xunan007/leetcode/tree/master/0813-all-paths-from-source-to-target) |
+| [0922-possible-bipartition](https://github.com/xunan007/leetcode/tree/master/0922-possible-bipartition) |
 | [1036-rotting-oranges](https://github.com/xunan007/leetcode/tree/master/1036-rotting-oranges) |
 ## Binary Tree
 |  |
@@ -593,6 +595,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/xunan007/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0200-number-of-islands](https://github.com/xunan007/leetcode/tree/master/0200-number-of-islands) |
 | [0801-is-graph-bipartite](https://github.com/xunan007/leetcode/tree/master/0801-is-graph-bipartite) |
+| [0922-possible-bipartition](https://github.com/xunan007/leetcode/tree/master/0922-possible-bipartition) |
 ## Greedy
 |  |
 | ------- |
@@ -709,6 +712,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0332-reconstruct-itinerary](https://github.com/xunan007/leetcode/tree/master/0332-reconstruct-itinerary) |
 | [0801-is-graph-bipartite](https://github.com/xunan007/leetcode/tree/master/0801-is-graph-bipartite) |
 | [0813-all-paths-from-source-to-target](https://github.com/xunan007/leetcode/tree/master/0813-all-paths-from-source-to-target) |
+| [0922-possible-bipartition](https://github.com/xunan007/leetcode/tree/master/0922-possible-bipartition) |
 ## Eulerian Circuit
 |  |
 | ------- |
