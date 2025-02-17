@@ -261,6 +261,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/xunan007/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/xunan007/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0128-longest-consecutive-sequence](https://github.com/xunan007/leetcode/tree/master/0128-longest-consecutive-sequence) |
+| [0136-single-number](https://github.com/xunan007/leetcode/tree/master/0136-single-number) |
 | [0139-word-break](https://github.com/xunan007/leetcode/tree/master/0139-word-break) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/xunan007/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/xunan007/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
@@ -440,6 +441,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0078-subsets](https://github.com/xunan007/leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/xunan007/leetcode/tree/master/0090-subsets-ii) |
+| [0136-single-number](https://github.com/xunan007/leetcode/tree/master/0136-single-number) |
 | [0222-count-complete-tree-nodes](https://github.com/xunan007/leetcode/tree/master/0222-count-complete-tree-nodes) |
 | [0491-non-decreasing-subsequences](https://github.com/xunan007/leetcode/tree/master/0491-non-decreasing-subsequences) |
 ## Backtracking
