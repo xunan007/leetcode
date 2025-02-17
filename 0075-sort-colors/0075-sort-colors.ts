@@ -36,11 +36,11 @@ function sortColors(nums: number[]): void {
     let p2 = nums.length - 1;
     let i = 0;
     let j = 0;
-    while (i <= p2) {
+    while (i <= p2) { // 注意这里的越界条件
         if (nums[i] === 0) {
             [nums[i], nums[p0]] = [nums[p0], nums[i]];
             p0++;
-            if (p0 > i) {
+            if (p0 > i) { // i要在p0和p2之间
                 i++;
             }
         } else if (nums[i] === 2) {
@@ -51,10 +51,3 @@ function sortColors(nums: number[]): void {
         }
     }
 };
-
-// // [2,0,2,1,1,0]
-// [0, 0, 2, 1, 1, 2] i = 0, p0 = 0, p2 = 4
-// [0, 0, 2, 1, 1, 2] i = 1, p0 = 1, p2 = 4
-// [0, 0, 2, 1, 1, 2] i = 2, p0 = 2, p2 = 4
-// [0, 0, 1, 1, 2, 2] i = 2, p0 = 2, p2 = 3
-// [0, 0, 1, 1, 2, 2] i = 3, p0 = 2, p2 = 3
