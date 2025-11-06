@@ -1,4 +1,6 @@
 function longestConsecutive(nums: number[]): number {
+    // 用 Set 去重，然后找到以每个数字开始的最长连续序列
+    // 连续序列的特性，前后一定是+1-1，以此来找到开头的那个，如果是离散的单个，那len只会是1
     let record: Set<number> = new Set();
     nums.forEach((item) => {
         record.add(item);
