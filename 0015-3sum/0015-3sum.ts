@@ -1,4 +1,7 @@
 function threeSum(nums: number[]): number[][] {
+    // 核心：
+    // 1. 双指针，先固定头，然后再两个指针扫描
+    // 2. 去重逻辑，头去重，两个指针去重（首次不去重）
     let result = [];
     let left = 0;
     let right = nums.length - 1;
