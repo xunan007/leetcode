@@ -11,6 +11,7 @@ function trap(height: number[]): number {
     //     if (lh < rh) {
     //         result += lh-height[left];
     //         left++;
+    //         // 这里的逻辑很重要，考虑最大的那个要把自己给考虑进去
     //         lh = Math.max(lh, height[left]);
     //     } else {
     //         result += rh - height[right];
