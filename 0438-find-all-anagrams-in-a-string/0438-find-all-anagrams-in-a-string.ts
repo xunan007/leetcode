@@ -1,48 +1,54 @@
 function findAnagrams(s: string, p: string): number[] {
-    let result = [];
-    let record = new Array(26).fill(0);
-    let pos = 'a'.charCodeAt(0);
-    let less = 0;
-    // 先记录好数据
+    // 这道题的核心在于如何判断当前的子串是异位词
+    // 这里用的是消除的逻辑，初始化用 p 放到记录表里面个数是正数，用 s 里面对应数量的子串去消除 p
+    // 匹配到就消除（直接减），消除到消除的个数为 0 就成功
+    // 匹配不到也是消除（这个时候记录表是负的），消除个数反而会增加
+    const dictionary = new Array(26).fill(0);
+    const pos = 'a'.charCodeAt(0);
+    const result = [];
+    let remove = 0;
     for (let i = 0; i < p.length; i++) {
-        const index = p[i].charCodeAt(0) - pos;
-        if (record[index] === 0) {
-            less++;
-        }
-        record[index]++;
+        dictionary[p[i].charCodeAt(0) - pos]++;
+        remove++;
     }
-    // 开始用窗口去扫描
-    const winLen = p.length;
-    for (let start = 0, end = 0; end < s.length; end++) {
-        if (end - start < winLen) {
-            console.log(start, end);
-            const index = s[end].charCodeAt(0) - pos;
-            record[index]--;
-            if (record[index] === 0) {
-                less--;
+    let left = 0;
+    let right = 0;
+    while (right < s.length) {
+        if (right - left + 1 <= p.length) {
+            const idx = s[right].charCodeAt(0) - pos;
+            dictionary[idx]--;
+            if (dictionary[idx] >= 0) { // 注意这里的>=0，考虑到 aa 的情况
+                // 刚好被消除掉
+                remove--;
+            } else {
+                remove++;
             }
-            if (less === 0) {
-                console.log('---do', start);
-                result.push(start);
+            if (remove === 0) {
+                result.push(left);
             }
+            right++;
             continue;
         }
-        // 控制好窗口的长度
-        const oStartIdx = s[start].charCodeAt(0) - pos;
-        record[oStartIdx]++;
-        if (record[oStartIdx] === 1) {
-            less++;
+        // 还原消除
+        // 两种情况：一种本来需要被消除掉的，结果没消除，这种+；本来不需要被消除的，还原了要-
+        dictionary[s[left].charCodeAt(0) - pos]++;
+        if (dictionary[s[left].charCodeAt(0) - pos] <= 0) {
+            remove--;
+        } else {
+            remove++;
         }
-        const endIdx = s[end].charCodeAt(0) - pos;
-        record[endIdx]--;
-        if (record[endIdx] === 0) {
-            less--;
+        left++;
+        // 消除
+        dictionary[s[right].charCodeAt(0) - pos]--;
+        if (dictionary[s[right].charCodeAt(0) - pos] >= 0) { 
+            remove--;
+        } else {
+            remove++;
         }
-        start++;
-        if (less === 0) {
-            result.push(start);
+        if (remove === 0) {
+            result.push(left);
         }
+        right++;
     }
     return result;
 };
-// rophenylhydrazine
