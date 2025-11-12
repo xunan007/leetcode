@@ -1,19 +1,18 @@
+// 前缀和：https://leetcode.cn/problems/range-sum-query-immutable/solutions/627185/jian-dan-wen-ti-xi-zhi-fen-xi-qian-tan-q-t2nz
 class NumArray {
-    private pre: number[] = [];
+    currSum: number[];
     constructor(nums: number[]) {
+        this.currSum = [];
+        // 先转换成前缀和数组
         let sum = 0;
         for (let i = 0; i < nums.length; i++) {
             sum += nums[i];
-            this.pre.push(sum);
+            this.currSum.push(sum);
         }
     }
 
     sumRange(left: number, right: number): number {
-        if (left === 0) {
-            return this.pre[right];
-        }
-        return this.pre[right] - this.pre[left - 1];
-        
+        return this.currSum[right] - (left !== 0 ? this.currSum[left - 1] : 0);
     }
 }
 
