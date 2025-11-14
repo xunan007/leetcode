@@ -1,45 +1,37 @@
 function minWindow(s: string, t: string): string {
-    // 这道题用滑动窗口来解题，但是难点在于如何优化每一次判断子串是否满足要求
-    // 这里可以通过引入一个 less 变量做条件判断的转换
-
-    let ori = new Array(128).fill(0);
-    let less = 0;
-    let maxLen = Infinity;
-    let sl, sr = 0;
-
+    // 难点在于窗口如何进行窗口的动态伸缩
+    // 右边不断增大，直到覆盖所有字符
+    // 覆盖完后，左边不断减少，直到损失一个字符，然后继续右边不断扩大
+    let result: string = '';
+    let mp: Map<string, number> = new Map();
+    let find: number = t.length; // 为0和为负都没关系
+    // 还是要用消除的思路来做
     for (let i = 0; i < t.length; i++) {
-        const idx = t[i].codePointAt(0);
-        if (ori[idx] === 0) {
-            less++;
-        }
-        ori[idx]++;
+        mp.set(t[i], mp.has(t[i]) ? mp.get(t[i]) + 1 : 1);
     }
-
-    let start = 0;
-    let end = 0;
-    for (;end < s.length; end++) {
-        let c = s[end].codePointAt(0);
-        ori[c]--;
-        if (ori[c] === 0) {
-            less--;
-        }
-
-        while(less === 0) {
-            if (end - start + 1 < maxLen) {
-                sl = start;
-                sr = end;
-                maxLen = end - start + 1;
+    let left = 0;
+    let right = 0;
+    for (let right = 0; right < s.length; right++) {
+        const g = mp.get(s[right]);
+        if (g !== undefined) {
+            mp.set(s[right], g - 1);
+            if (g - 1 >= 0) {
+                find--;
             }
-            
-            let c = s[start].codePointAt(0);
-            if (ori[c] === 0) {
-                less++;
-            }
-            ori[c]++;
-            start++;
         }
-    }
-
-    return maxLen < Infinity ? s.slice(sl, sr+1) : '';
-
-};
+        while (find <= 0) {
+            if (result.length === 0 || result.length > right - left + 1) {
+                result = s.slice(left, right + 1);
+            }
+            const g = mp.get(s[left]);
+            if (g !== undefined) {
+                mp.set(s[left], g + 1);
+                if (g + 1 > 0) {
+                    find++;
+                }
+            }
+            left++;
+        }
+    };
+    return result;
+}
