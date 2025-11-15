@@ -1,61 +1,49 @@
 function spiralOrder(matrix: number[][]): number[] {
-    let m = matrix[0].length;
-    let n = matrix.length;
+    // 每次遍历都是右下左上，访问过后标记当前位置
+    // 一旦越界或者遇到访问过的就开始调换方向
+    const r = matrix.length;
+    const c = matrix[0].length;
+    const sum = r * c;
+    const result = [];
 
-    let result = [];
-    let loop = Math.floor(n / 2);
-    let last;
-    if (n % 2 === 1) {
-        last = matrix[loop][loop];
+    let x = 0; // 列
+    let y = 0; // 行
+    let change = 0;
+
+    const move = (x: number, y: number, change: number): { x: number, y: number } => {
+        let _x = x;
+        let _y = y;
+        const _change = change % 4;
+        if (_change === 0) {
+            _x++;
+        }
+        if (_change === 1) {
+            _y++;
+        }
+        if (_change === 2) {
+            _x--;
+        }
+        if (_change === 3) {
+            _y--;
+        }
+        return { x: _x, y: _y };
     }
 
-    let x = 0, y = 0;
-    let ml = m - 1;
-    let nl = n - 1;
-
-    while (ml > 0 && nl > 0) {
-        for (let i = 0; i < ml; i++) {
-            result.push(matrix[y][x + i]);
-        }
-        x += ml;
-
-        for (let i = 0; i < nl; i++) {
-            result.push(matrix[y + i][x]);
-        }
-        y += nl;
-
-        for (let i = 0; i < ml; i++) {
-            result.push(matrix[y][x - i]);
-        }
-        x -= ml;
-
-        for (let i = 0; i < nl; i++) {
-            result.push(matrix[y - i][x]);
-        }
-        y -= nl;
-
-        ml -= 2;
-        nl -= 2;
-        x++;
-        y++;
-    }
-
-    // 处理最后的内容
-    if (ml === 0 && nl === 0) {
-        // 矩形，只有最后一个
+    for (let i = 0; i < sum; i++) {
         result.push(matrix[y][x]);
-    } else if (ml === 0) {
-        // x固定，y变化
-        for (let i = 0; i <= nl; i++) {
-            result.push(matrix[y + i][x]);
-        }
-    } else if (nl === 0) {
-        // y固定，x变化
-        for (let i = 0; i <= ml; i++) {
-            result.push(matrix[y][x + i]);
+        matrix[y][x] = null;
+        let { x: moveX, y: moveY } = move(x, y, change);
+        if (moveX < 0 || moveY < 0 || moveX >= c || moveY >= r || matrix[moveY][moveX] === null) {
+            // 转向
+            change++;
+            let p = move(x, y, change);
+            x = p.x;
+            y = p.y
+        } else {
+            x = moveX;
+            y = moveY;
         }
     }
 
     return result;
-
 };
