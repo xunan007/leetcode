@@ -2,25 +2,19 @@
  Do not return anything, modify matrix in-place instead.
  */
 function rotate(matrix: number[][]): void {
-    let len = matrix.length;
-    if (len === 0 || len === 1) {
-        return;
-    }
-    // 对角线先翻转一遍
-    for (let i = 0; i < len - 1; i++) {
-        for (let j = i + 1; j < len; j++) {
-            let tmp = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = tmp;
+    // 本质是个数学问题：转置+列对调=旋转
+    const r = matrix.length;
+    const c = matrix[0].length;
+    // 先转置
+    for (let i = 0; i < r; i++) {
+        for (let j = i + 1; j < c; j++) {
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
         }
     }
-    // 中线对称两侧再翻转一遍
-    let mid = Math.floor(len / 2);
-    for (let i = 0; i < len; i++) {
-        for (let j = 0; j < mid; j++) {
-            let tmp = matrix[i][j];
-            matrix[i][j] = matrix[i][len - 1 - j];
-            matrix[i][len - 1 - j] = tmp;
+    // 再进行列的对调
+    for (let i = 0; i < Math.floor(c / 2); i++) {
+        for (let j = 0; j < r; j++) {
+            [matrix[j][i], matrix[j][c - i - 1]] = [matrix[j][c - i - 1], matrix[j][i]];
         }
     }
 };
