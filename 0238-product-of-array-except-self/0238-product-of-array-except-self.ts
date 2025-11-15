@@ -1,16 +1,16 @@
 function productExceptSelf(nums: number[]): number[] {
-    let result: number[] = new Array(nums.length);
+    // 前缀和+倒过来算
+    const result = new Array(nums.length);
+    let sum = 1;
     for (let i = 0; i < nums.length; i++) {
-        if (i === 0) {
-            result[i] = 1;
-        } else {
-            result[i] = result[i - 1] * nums[i - 1];
-        }
+        sum = sum * nums[i];
+        result[i] = sum;
     }
     let R = 1;
+    result[nums.length - 1] = result[nums.length - 2];
     for (let i = nums.length - 2; i >= 0; i--) {
         R = R * nums[i + 1];
-        result[i] = result[i] * R;
+        result[i] = i === 0 ? R : result[i - 1] * R;
     }
     return result;
 };
