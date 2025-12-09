@@ -1,16 +1,16 @@
 function searchMatrix(matrix: number[][], target: number): boolean {
-    let x = 0;
-    let y = matrix[0].length-1;
-    while(x >= 0 && y >= 0 && x < matrix.length && y < matrix[0].length) {
-        let compare = matrix[x][y];
-        if (target === compare) {
+    // 这道题如果一个个找那太慢了，从矩阵右上角开始排除
+    const row = matrix.length;
+    const col = matrix[0].length;
+    let i = 0;
+    let j = col - 1;
+    while (i >= 0 && i < row && j >= 0 && j < col) {
+        if (matrix[i][j] === target) {
             return true;
-        } else {
-            if (target < compare) {
-                y--;
-            } else {
-                x++;                    
-            }
+        } else if (matrix[i][j] < target) {
+            i++;
+        } else if (matrix[i][j] > target) {
+            j--;
         }
     }
     return false;
