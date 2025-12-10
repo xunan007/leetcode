@@ -53,6 +53,7 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
 	// // 2. 分解问题
     // // 这道题的核心在于：这个函数本身如何去定义，它的语义并不是返回 LCA，而是以 root 为根返回包含 p/q/最近公共祖先
     // // 那么问题就可以被分解了，既然我找的是 root 为根的，那么就可以拆分成去找左子树和找右子树
+	// // 注意这道题，函数语义是比较特殊的，记住就好了
 
     // // 找到什么时候结束呢？为空或者找到 p 或者 q 就没有必要继续往下找了
     // if (root === null || root === p || root === q) {
