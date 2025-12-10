@@ -13,23 +13,21 @@
  */
 
 function maxPathSum(root: TreeNode | null): number {
-    // 一个节点所在路径的最大值，就是左边最大值+右边最大值+本身、左边最大值+本身、右边最大值+本身、本身这4者的最大值
-    // 返回给上一层的时候，是取单边的最大值
-    if (root === null) {
-        return 0;
-    }
-    let max = -Infinity;
-    const getMaxSum = (root: TreeNode): number => {
-        // 根节点了
+    // 当前的最大路径和等于左边的最大路径和+右边的最大路径和
+    let ans = -Infinity;
+    const maxSum = (root: TreeNode | null): number => {
         if (root === null) {
             return 0;
         }
-        let l = getMaxSum(root.left);
-        let r = getMaxSum(root.right);
-        let val = Math.max(root.val, root.val + l, root.val + r);
-        max = Math.max(val, root.val + l + r, max);
-        return val;
+        let left = maxSum(root.left);
+        left = left > 0 ? left : 0;
+        let right = maxSum(root.right);
+        right = right > 0 ? right : 0;
+        const result = left + root.val + right;
+        ans = Math.max(ans, result);
+        // 但是 return 出去只能选一条边，不然就会出错
+        return left < right ? root.val + right : root.val + left;
     }
-    getMaxSum(root);
-    return max;
+    maxSum(root);
+    return ans;
 };
