@@ -50,29 +50,30 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
         return null;
     }
     return walk(root);
-    // // 2. 分解问题
-    // let l = lowestCommonAncestor(root.left, p, q);
-    // let r = lowestCommonAncestor(root.right, p, q);
+	// // 2. 分解问题
+    // // 这道题的核心在于：这个函数本身如何去定义，它的语义并不是返回 LCA，而是以 root 为根返回包含 p/q/最近公共祖先
+    // // 那么问题就可以被分解了，既然我找的是 root 为根的，那么就可以拆分成去找左子树和找右子树
 
-    // if (l && r) {
+    // // 找到什么时候结束呢？为空或者找到 p 或者 q 就没有必要继续往下找了
+    // if (root === null || root === p || root === q) {
     //     return root;
     // }
 
-    // if (l || r) {
-    //     if (root.val === p.val || root.val === q.val) {
-    //         return root;
-    //     }
-    //     if (l) {
-    //         return l;
-    //     }
-    //     if (r) {
-    //         return r;
-    //     }
-    // }
-
-    // if (root.val === p.val || root.val === q.val) {
+    // let left = lowestCommonAncestor(root.left, p, q);
+    // let right = lowestCommonAncestor(root.right, p, q);
+    // // 找 root 的相关性节点，那么也可以被分解为找左右子树的相关性节点
+    // // 这里就有好几种情况了
+    // // 1. left 和 right 都能找到，那么这种情况必然是 p 和 q 分散在两个子树，这个时候就返回 root 即可
+    // if (left && right) {
     //     return root;
     // }
-
-    // return null;
+    // // 2. left 和 right 都找不到，那么就是没有
+    // if (!left && !right) {
+    //     return null;
+    // }
+    // // 3. left 有 right 没有、left 没有 right 有
+    // // 这两个可以直接合并
+    // if ((left && !right) || (!left && right)) {
+    //     return left ? left : right;
+    // }
 };
