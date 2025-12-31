@@ -1,29 +1,27 @@
 function combinationSum3(k: number, n: number): number[][] {
-    let path: number[] = [];
-    let result: number[][] = [];
-    let sum: number = 0;
-    const backtracking = (startIdx: number, depth: number) => {
-        if (depth === k) {
+    const path = [];
+    const result = [];
+
+    const dfs = (i: number) => {
+        const sum = path.reduce((a, c) => a + c, 0);
+        // 做减枝
+        if (sum > n) {
+            return;
+        }
+        if (path.length === k) {
             if (sum === n) {
                 result.push(path.slice());
             }
             return;
         }
-        // 剪枝优化
-        for (let i = startIdx; i <= 9 - (k - path.length) + 1; i++) { // 数字不够的剪枝
-            sum += i;
-            path.push(i);
-            // 纵向剪枝
-            if (sum > n) { // 超出了，深度和广度都直接结束
-                sum -= i;
-                path.pop();
-                return;
-            }
-            backtracking(i + 1, depth + 1);
-            sum -= i;
+
+        for (let j = i; j < 9; j++) {
+            path.push(j + 1);
+            dfs(j + 1);
             path.pop();
         }
-    }
-    backtracking(1, 0);
+    };
+
+    dfs(0);
     return result;
 };
