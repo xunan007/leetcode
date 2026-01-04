@@ -1,52 +1,40 @@
 function solveNQueens(n: number): string[][] {
-    let result: string[][] = [];
-    let path: number[] = [];
-    let onPath: boolean[] = new Array(false);
-    const isValid = (i: number): boolean => {
-        // 第一行肯定是返回 true
-        if (path.length === 0) {
-            return true;
-        }
-        // 第二行开始要考虑对角线
-        let l = i - 1;
-        let r = i + 1;
-        for (let j = path.length - 1; j >= 0; j--) {
-            if (path[j] === l || path[j] === r) {
+    // 实际上就是全排列+剪纸
+    const result = [];
+    const path = [];
+
+    const isValid = (path: number[], i: number): boolean => {
+        const index = path.length;
+        for (let j = 0; j < path.length; j++) {
+            // 剪枝函数核心公式
+            if (Math.abs(i - path[j]) === index - j) {
                 return false;
             }
-            l--;
-            r++;
         }
         return true;
     }
-    const dfs = (): void => {
+
+    const dfs = () => {
         if (path.length === n) {
-            let _result: string[] = [];
+            const arr = [];
             for (let i = 0; i < path.length; i++) {
-                let arr: string[] = new Array(n).fill('.');
-                arr[path[i]] = 'Q';
-                _result.push(arr.join(''));
+                const _arr = new Array(n).fill('.');
+                _arr[path[i]] = 'Q';
+                arr.push(_arr.join(''));
             }
-            result.push(_result);
+            result.push(arr);
             return;
         }
         for (let i = 0; i < n; i++) {
-            if (onPath[i]) {
-                continue;
+            // 剪枝--对角线
+            if (path.indexOf(i) === -1 && isValid(path, i)) {
+                path.push(i);
+                dfs();
+                path.pop();
             }
-            if (!isValid(i)) {
-                continue;
-            }
-            onPath[i] = true;
-            path.push(i);
-
-            dfs();
-
-            onPath[i] = false;
-            path.pop();
         }
     };
-
     dfs();
+
     return result;
 };
