@@ -1,4 +1,5 @@
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
+    // hot100 里面最难的一道题
     // 参考：https://leetcode.cn/problems/median-of-two-sorted-arrays/solutions/2950686/tu-jie-xun-xu-jian-jin-cong-shuang-zhi-z-p2gd
     // 枚举分组法
     // 这里调整数组顺序、加入正负无穷的做法非常巧妙
