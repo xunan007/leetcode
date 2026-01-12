@@ -1,5 +1,7 @@
 function largestRectangleArea(heights: number[]): number {
     // 本质上就是每日温度两个方向数组的叠加计算，看灵茶山的解释就可以了
+    // 单调栈解法：找大的，那就要存大的，大的在栈底（上小下大）；找小的，那么就要存小的，小的在栈底（上大下小）
+    // 核心：找左边第一个比它小的， 找右边第一个比它小的，然后这两者之间构成了w（不包括这两个），h就是当前的高度
     const len = heights.length;
     let stack: number[] = [];
     // 找左边第一个比它小的
