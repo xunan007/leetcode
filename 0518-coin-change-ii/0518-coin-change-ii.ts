@@ -1,15 +1,40 @@
 function change(amount: number, coins: number[]): number {
-    let dp: number[] = new Array(amount + 1).fill(0);
+    // 1. 正常做法
+    // dp[i][j] 表示的是 0-i 的硬币中，能转满 j 的组合数
+    // let dp = [];
+    // for (let i = 0; i < coins.length; i++) {
+    //     dp.push(new Array(amount + 1).fill(0));
+    //     dp[i][0] = 1; // 为空的时候有一种组合，就是啥都不取
+    // }
+
+    // // 第一行需要初始化
+    // for (let j = 1; j <= amount; j++) {
+    //     dp[0][j] = j % coins[0] === 0 ? 1 : 0;
+    // }
+
+    // for (let i = 1; i < coins.length; i++) {
+    //     for (let j = 1; j <= amount; j++) {
+    //         // 放不放这个硬币
+    //         // 放，需要预留空间，并且前面可能还放这个硬币
+    //         // 不放，那么就是不放的和了
+    //         dp[i][j] = (j - coins[i] >= 0 ? dp[i][j - coins[i]] : 0) + dp[i - 1][j];
+    //     }
+    // }
+
+    // return dp[coins.length - 1][amount];
+
+    // 2. 降维
+    let dp = new Array(amount + 1).fill(0);
     dp[0] = 1;
-    for (let i = 1; i <= coins.length; i++) {
-        // 注意这里的遍历顺序，不是从尾到头遍历
-        // 因为原始的状态转移方程是dp[i][j]=dp[i-1][j]+dp[i][j-coins[i]]
-        // 这里dp[i][j]不仅依赖于上一层的数据，还依赖于同一层前面的数据，所以要保证数据是新更新到的，得用正序
+    for (let j = 1; j <= amount; j++) {
+        dp[j] = j % coins[0] === 0 ? 1 : 0;
+    }
+    // 注意一下这里遍历顺序不用换
+    for (let i = 1; i < coins.length; i++) {
         for (let j = 1; j <= amount; j++) {
-            if (j - coins[i - 1] >= 0) {
-                dp[j] = dp[j] + dp[j - coins[i - 1]]
-            }
+            dp[j] = dp[j] + (j - coins[i] >= 0 ? dp[j - coins[i]] : 0);
         }
     }
+
     return dp[amount];
 };
