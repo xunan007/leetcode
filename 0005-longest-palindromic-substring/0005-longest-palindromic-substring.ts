@@ -1,26 +1,26 @@
 function longestPalindrome(s: string): string {
-    let dp: boolean[][] = [];
+    // dp[i][j]表示以i为头，j为尾是否是回文子串
+    // 这道题其实不难，搞清楚定义就知道怎么做了
+    let dp = [];
     for (let i = 0; i < s.length; i++) {
-        let arr = new Array(s.length).fill(false);
-        arr[i] = true;
-        dp.push(arr);
+        dp.push(new Array(s.length).fill(false));
+        dp[i][i] = true
     }
-    let result = s[0];
+    let start = 0;
+    let end = 0
+
     for (let i = s.length - 1; i >= 0; i--) {
-        for (let j = i + 1; j < s.length; j++) {
+        for (let j = i + 1; j < s.length; j++) { // 注意这里的遍历顺序
             if (s[i] === s[j]) {
-                if (i + 1 === j) {
-                    dp[i][j] = true;
-                } else {
-                    dp[i][j] = dp[i + 1][j - 1];
-                }
+                dp[i][j] = i + 1 === j ? true : dp[i + 1][j - 1];
             } else {
                 dp[i][j] = false;
             }
-            if (dp[i][j] && result.length < j - i + 1) {
-                result = s.slice(i, j + 1);
+            if (dp[i][j] && j - i > end - start) {
+                [start, end] = [i, j];
             }
         }
     }
-    return result;
+
+    return s.slice(start, end + 1);
 };
