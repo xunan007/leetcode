@@ -11,30 +11,28 @@
  */
 
 function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
-    if (headA === null || headB === null) {
-        return null;
-    }
+    let p1 = headA;
+    let p2 = headB;
+    // 命中很容易，怎么判断不命中
 
-    const a = headA;
-    const b = headB;
-
-    while (headA !== headB) {
-        if (headA.next === null && headB.next === null) {
+    while (p1 !== p2) {
+        p1 = p1.next;
+        p2 = p2.next;
+        // 等长相交的话下一轮直接命中while的条件了根本进不来
+        // 同时命中尾巴只有两种情况，不相交（等长/不等长）
+        if (p1 === null && p2 === null) {
             return null;
         }
-
-        if (headA.next === null) {
-            headA = b;
-        } else {
-            headA = headA.next;
+        if (p1 === null) {
+            p1 = headB;
         }
-        if (headB.next === null) {
-            headB = a;
-        } else {
-            headB = headB.next;
+        if (p2 === null) {
+            p2 = headA;
         }
     }
 
-    return headA;
-
+    return p1;
 };
+
+a b c
+d e f
