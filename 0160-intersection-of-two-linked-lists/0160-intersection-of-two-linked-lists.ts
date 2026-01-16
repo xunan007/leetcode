@@ -33,6 +33,3 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 
     return p1;
 };
-
-a b c
-d e f
