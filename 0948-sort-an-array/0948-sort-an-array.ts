@@ -220,86 +220,45 @@ function partition(nums: number[], start: number, end: number): number {
 // 复杂度O(nlogn)
 // 通过建立大顶堆后，然后不断把末尾元素和头元素交换，然后头元素沉底来达到最终的排序效果
 // 注意沉底的时候要剔除掉已经排序好的元素，不然就陷入死循环了
-function heapSort(nums: number[]): number[] {
-    const len = nums.length;
-    if (len === 0) {
-        return [];
+function HeapSort(nums: number[]): number[] {
+    // 堆排序：建造一个大顶堆
+    // 先上浮再下浮
+    // 先找到有多少根节点
+
+    const swap = (nums, i, j) => {
+        [nums[i], nums[j]] = [nums[j], nums[i]];
     }
-    // 构建一个大顶堆
-    let heap = new Heap((a, b) => b - a);
-    for (let i = 0; i < len; i++) {
-        heap.push(nums[i]);
-    }
-    for (let i = 0; i < len; i++) {
-        heap.adjust();
-    }
-    return heap.data();
-}
-class Heap {
-    private queue: number[];
-    private fn: Function;
-    private count: number;
-    constructor(fn) {
-        this.fn = fn;
-        this.queue = [];
-        this.count = 0;
-    }
-    push(item: number) {
-        this.queue.push(item);
-        // 找父节点，如果父节点更小，不停往上交换
-        let child = this.size() - 1;
-        let parent = Math.floor((child - 1) / 2);
-        while (parent >= 0 && this.compare(this.queue, parent, child)) {
-            this.swap(this.queue, parent, child);
-            child = parent;
-            parent = Math.floor((child - 1) / 2);
+
+    const maxHeapify = (nums, i, size) => {
+        const l = 2 * i + 1;
+        const r = 2 * i + 2;
+        let largest = i;
+        // 找左和右到底哪个是最大
+        if (l < size && nums[l] > nums[largest]) {
+            largest = l;
+        }
+        if (r < size && nums[r] > nums[largest]) {
+            largest = r;
+        }
+        if (largest !== i) {
+            swap(nums, i, largest);
+            // 注意堆排序只需要递归其中一个分支即可
+            maxHeapify(nums, largest, size);
         }
     }
-    adjust() {
-        // 交换的次数不要超过长度
-        if (this.count === this.size()) {
-            return;
-        }
-        // 头尾交换
-        const limit = this.size() - 1 - this.count;
-        this.swap(this.queue, 0, limit);
-        // 头部元素下沉
-        let parent = 0;
-        let child = this.getChild(parent, limit);
-        while (parent < limit && child < limit && this.compare(this.queue, parent, child)) {
-            this.swap(this.queue, parent, child);
-            parent = child;
-            child = this.getChild(parent, limit);
-        }
-        this.count++;
+
+    // 先上浮
+    for (let j = Math.floor(nums.length / 2) - 1; j >= 0; j--) {
+        maxHeapify(nums, j, nums.length);
     }
-    getChild(parent: number, limit: number): number {
-        let left = parent * 2 + 1;
-        let right = left + 1;
-        if (left < limit && right < limit) {
-            return this.compare(this.queue, left, right) ? right : left;
-        }
-        if (left < limit) {
-            return left;
-        }
-        if (right < limit) {
-            return right;
-        }
-        // 溢出
-        return limit;
+
+    // 上浮完了，开始出货
+    let size = nums.length;
+    while (size > 0) {
+        size--;
+        swap(nums, 0, size);
+        maxHeapify(nums, 0, size);
     }
-    swap(nums: number[], a: number, b: number) {
-        let tmp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = tmp;
-    }
-    compare(nums: number[], a: number, b: number): boolean {
-        return nums[a] - nums[b] < 0;
-    }
-    size(): number {
-        return this.queue.length;
-    }
-    data(): number[] {
-        return this.queue;
-    }
-}
+
+    return nums;
+};
