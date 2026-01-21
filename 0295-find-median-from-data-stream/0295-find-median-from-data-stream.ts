@@ -1,109 +1,106 @@
-// 这道题实际上就是构建两个堆，大顶堆和小顶堆，刚好组成一个拱桥型的数据，底->顶->底，小->大-小->大
-// 在构建堆的时候，对于堆的大小，总是要满足left=right或者left+1=right；元素加入a堆时，需要和b堆的栈顶去做比较
-// 所以，初始化时，元素x直接加入left堆
-// 当left=right时，x需要添加进left堆，如果x<right堆顶，直接进left堆；如果x>=right堆顶，right的顶进左边，x进right
-// 当left>right时，x需要添加进right堆，这个时候比较的基准就是left顶
 class MedianFinder {
-    private left: Heap; // 大顶堆
-    private right: Heap; // 小顶堆
+    // 左边大顶堆，右边小顶堆
+    // 约定左边最多比右边大 1
+    // 区分奇偶
+    // 注意建堆才需要遍历
+    // 插入和删除实际上只需要上浮、下沉的操作，不需要再建堆了
+    // 插入：插到最后，开始上浮
+    // 删除：最后一个去掉，然后补到第一位，开始下沉
+    private lheap: number[];
+    private rheap: number[];
     constructor() {
-        this.left = new Heap((a, b) => a - b < 0); // 大顶堆
-        this.right = new Heap((a, b) => a - b > 0); // 小顶堆
+        this.lheap = [];
+        this.rheap = [];
     }
 
     addNum(num: number): void {
-        // 左顶堆优先
-        if (this.left.size() === 0) {
-            this.left.push(num);
-            return;
-        }
-        if (this.left.size() === this.right.size()) {
-            if (num >= this.right.top()) {
-                this.left.push(this.right.top());
-                this.right.modify(num);
+        const ln = this.lheap.length;
+        const rn = this.rheap.length;
+        // 左右大小相同
+        if (ln === rn) {
+            if (ln === 0) {
+                this.lheap.push(num);
             } else {
-                this.left.push(num);
+                if (num > this.rheap[0]) {
+                    // 左边插入右边的头
+                    this.lheap.push(this.rheap[0]);
+                    this.maxShiftUp(this.lheap, this.lheap.length - 1);
+                    // 右边去头后插入新值（相当于直接替换头）
+                    this.rheap[0] = num;
+                    this.minShiftDown(this.rheap, 0);
+                } else {
+                    // 左边插入新值
+                    this.lheap.push(num);
+                    this.maxShiftUp(this.lheap, this.lheap.length - 1);
+                }
             }
-            return;
-        }
-        // 右顶堆优先
-        if (this.left.size() > this.right.size()) {
-            if (num >= this.left.top()) {
-                this.right.push(num);
+        } else {
+            if (num >= this.lheap[0]) {
+                // 右边插入新值
+                this.rheap.push(num);
+                this.minShiftUp(this.rheap, this.rheap.length - 1);
             } else {
-                this.right.push(this.left.top());
-                this.left.modify(num);
+                // 右边插入左边的头
+                this.rheap.push(this.lheap[0]);
+                this.minShiftUp(this.rheap, this.rheap.length - 1);
+                // 左边去头后插入新值
+                this.lheap[0] = num;
+                this.maxShiftDown(this.lheap, 0);
             }
-            return;
         }
     }
 
     findMedian(): number {
-        if (this.left.size() === this.right.size()) {
-            return (this.left.top() + this.right.top()) / 2;
-        } else {
-            return this.left.top();
+        if ((this.lheap.length + this.rheap.length) % 2 === 0) {
+            return (this.lheap[0] + this.rheap[0]) / 2;
         }
+        return this.lheap[0];
     }
-}
 
-class Heap {
-    private queue: number[];
-    private fn: Function;
-    constructor(fn) {
-        this.queue = new Array();
-        this.fn = fn;
-    }
-    push(num: number) {
-        this.queue.push(num);
-        let child = this.size() - 1;
-        let parent = Math.floor((child - 1) / 2);
-        while (parent >= 0 && this.compare(this.queue, parent, child)) {
-            this.swap(this.queue, parent, child);
-            child = parent;
-            parent = Math.floor((child - 1) / 2);
+    private maxShiftUp(nums: number[], i: number) {
+        const parent = Math.floor((i - 1) / 2);
+        if (parent >= 0 && nums[i] > nums[parent]) {
+            [nums[i], nums[parent]] = [nums[parent], nums[i]];
+            this.maxShiftUp(nums, parent);
         }
     }
-    modify(num: number) {
-        this.queue[0] = num;
-        let parent = 0;
-        let child = this.getChild(parent);
-        while (parent < this.size() && child < this.size() && this.compare(this.queue, parent, child)) {
-            this.swap(this.queue, parent, child);
-            parent = child;
-            child = this.getChild(parent);
+
+    private maxShiftDown(nums: number[], i: number) {
+        let largest = i;
+        const size = nums.length;
+        if (2 * i + 1 < size && nums[2 * i + 1] > nums[largest]) {
+            largest = 2 * i + 1;
+        }
+        if (2 * i + 2 < size && nums[2 * i + 2] > nums[largest]) {
+            largest = 2 * i + 2;
+        }
+        if (i !== largest) {
+            [nums[i], nums[largest]] = [nums[largest], nums[i]];
+            this.maxShiftDown(nums, largest);
         }
     }
-    getChild(parent: number): number {
-        let left = parent * 2 + 1;
-        let right = left + 1;
-        if (left < this.size() && right < this.size()) {
-            return this.compare(this.queue, left, right) ? right : left;
+
+    private minShiftUp(nums: number[], i: number) {
+        const parent = Math.floor((i - 1) / 2);
+        if (parent >= 0 && nums[i] < nums[parent]) {
+            [nums[i], nums[parent]] = [nums[parent], nums[i]];
+            this.minShiftUp(nums, parent);
         }
-        if (left < this.size()) {
-            return left;
+    }
+
+    private minShiftDown(nums: number[], i: number) {
+        let smallest = i;
+        const size = nums.length;
+        if (2 * i + 1 < size && nums[2 * i + 1] < nums[smallest]) {
+            smallest = 2 * i + 1;
         }
-        if (right < this.size()) {
-            return right;
+        if (2 * i + 2 < size && nums[2 * i + 2] < nums[smallest]) {
+            smallest = 2 * i + 2;
         }
-        return this.size();
-    }
-    swap(queue: number[], a: number, b: number) {
-        let t = queue[a];
-        queue[a] = queue[b];
-        queue[b] = t;
-    }
-    compare(queue: number[], a: number, b: number): boolean {
-        return this.fn(queue[a], queue[b]);
-    }
-    size(): number {
-        return this.queue.length;
-    }
-    top(): number {
-        return this.queue[0];
-    }
-    data(): number[] {
-        return this.queue;
+        if (i !== smallest) {
+            [nums[i], nums[smallest]] = [nums[smallest], nums[i]];
+            this.minShiftDown(nums, smallest);
+        }
     }
 }
 
