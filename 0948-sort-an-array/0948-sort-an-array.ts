@@ -253,6 +253,7 @@ function HeapSort(nums: number[]): number[] {
     }
 
     // 上浮完了，开始出货
+    // 其实这也是一个下沉的过程
     let size = nums.length;
     while (size > 0) {
         size--;
