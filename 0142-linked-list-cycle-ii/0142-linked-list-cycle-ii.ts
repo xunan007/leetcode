@@ -11,6 +11,7 @@
  */
 
 function detectCycle(head: ListNode | null): ListNode | null {
+    // 注意：快慢指针一般不要用 dump
     if (head === null) {
         return null;
     }
