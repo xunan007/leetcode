@@ -29,4 +29,11 @@ function inorderTraversal(root: TreeNode | null): number[] {
     walk(root);
     return result;
     // 2. 分解问题
+    // 其实也是上面的代码
+    // 转换成了当前节点应该放在什么位置 + 子节点的处理
+    let result = [];
+    if (root === null) {
+        return result;
+    }
+    return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)];
 };
